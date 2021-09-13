@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- JAVA와 연결할 Mapper 파일 설정 -->
+<mapper namespace="poly.persistance.mapper.TestMapper">
+   <!-- insert, update, delete, select -->
+   <!-- <select id="getAdmin"  parameterType="string" resultType="AdminDTO">
+        SELECT *
+        FROM  admin
+        WHERE(ADMIN_CAM=#{campus})
+    </select>
+    
+    <update id="updateAdmin"  parameterType="AdminDTO">
+        UPDATE admin
+        SET 
+        	ADMIN_MN = #{admin_mn},
+        	ADMIN_MN_ORG = #{admin_mn_org},
+        	ADMIN_LOGO = #{admin_logo},
+        	ADMIN_REPORT_LIM = #{admin_report_lim}
+        WHERE (ADMIN_NO = #{admin_no})
+        
+    </update>
+    
+    <update id="clickCount"  parameterType="string">
+        UPDATE ad
+        SET 
+        	AD_CLICK = AD_CLICK + 1
+        WHERE (AD_NO = #{ad_no})
+
+    </update>
+    
+   	<insert id="insertBoard" parameterType="BoardDTO">
+		INSERT INTO
+		BOARD(PAGE, CONTENT, REG_DT, WRITER, TITLE)
+		VALUES (#{page}, #{content}, #{reg_dt}, #{writer}, #{title})
+	</insert>-->
+</mapper>

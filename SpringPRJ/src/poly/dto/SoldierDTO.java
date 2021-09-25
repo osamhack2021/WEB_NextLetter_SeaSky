@@ -30,6 +30,72 @@ public class SoldierDTO {
      */
     private String missSoldierRelationshipCd;
     private String traineeMgrSeq;
+	public String getMissSoldierClassCdNm() {
+		return missSoldierClassCdNm;
+	}
+	public void setMissSoldierClassCdNm(String missSoldierClassCdNm) {
+		this.missSoldierClassCdNm = missSoldierClassCdNm;
+	}
+	public String getMissSoldierClassCd() {
+		return missSoldierClassCd;
+	}
+	public void setMissSoldierClassCd(String missSoldierClassCd) {
+		this.missSoldierClassCd = missSoldierClassCd;
+	}
+	public String getGrpCdNm() {
+		return grpCdNm;
+	}
+	public void setGrpCdNm(String grpCdNm) {
+		this.grpCdNm = grpCdNm;
+	}
+	public String getGrpCd() {
+		return grpCd;
+	}
+	public void setGrpCd(String grpCd) {
+		this.grpCd = grpCd;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	public String getEnterDate() {
+		return enterDate;
+	}
+	public void setEnterDate(String enterDate) {
+		this.enterDate = enterDate;
+	}
+	public String getTrainUnitCdNm() {
+		return trainUnitCdNm;
+	}
+	public void setTrainUnitCdNm(String trainUnitCdNm) {
+		this.trainUnitCdNm = trainUnitCdNm;
+	}
+	public String getTrainUnitCd() {
+		return trainUnitCd;
+	}
+	public void setTrainUnitCd(String trainUnitCd) {
+		this.trainUnitCd = trainUnitCd;
+	}
+	public String getMissSoldierRelationshipCd() {
+		return missSoldierRelationshipCd;
+	}
+	public void setMissSoldierRelationshipCd(String missSoldierRelationshipCd) {
+		this.missSoldierRelationshipCd = missSoldierRelationshipCd;
+	}
+	public String getTraineeMgrSeq() {
+		return traineeMgrSeq;
+	}
+	public void setTraineeMgrSeq(String traineeMgrSeq) {
+		this.traineeMgrSeq = traineeMgrSeq;
+	}
 
-    //TODO generate Getter And Setter
+    
 }

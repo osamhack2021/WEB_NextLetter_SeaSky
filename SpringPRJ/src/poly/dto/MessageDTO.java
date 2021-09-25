@@ -3,6 +3,18 @@ package poly.dto;
 public class MessageDTO {
     private String title;
     private String content;
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 
-    //TODO generate Getter And Setter
+    
 }

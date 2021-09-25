@@ -1,6 +1,6 @@
 package poly.dto;
 
-public class SoliderDTO {
+public class SoldierDTO {
     /* SoldierClassName; // 성분
         '예비군인/훈련병' | '병사' | '장교' | '부사관' | '군무원' */
 	private String missSoldierClassCdNm;

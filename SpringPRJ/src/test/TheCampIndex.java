@@ -1,13 +1,13 @@
 package test;
 
 import poly.dto.CookieDTO;
-import poly.dto.SoliderDTO;
+import poly.dto.SoldierDTO;
 
 public class TheCampIndex {
     public static void main(String[] args) {
         //tempData
-        String USER_ID="user@mail.com";
-        String USER_PWD="password";
+        String USER_ID="hkgo6040@naver.com";
+        String USER_PWD="seasky1!";
 
         String TRAINEE_NAME="辫动动";
         String TRAINEE_BIRTH="20011129";
@@ -18,10 +18,33 @@ public class TheCampIndex {
         String ENTER_DATE="20200829";
         String RELATIONSHIP = "FRIEND";
 
-        SoliderDTO sDTO = new SoliderDTO();
+        SoldierDTO sDTO = new SoldierDTO();
         //TODO sDTO.setter
 
-        CookieDTO cDTO = new CookieDTO();
-        //https://github.com/parksb/the-camp-lib/blob/9e5aa48ebbd2d6ca8b279f70392a554df61356c1/src/services/login.ts#L15
+        MessageDTO mDTO = new MessageDTO();
+        //TODO mDTO.setter
+
+        HttpResponse<String> response = Unirest.post("https://www.thecamp.or.kr/login/loginA.do")
+        .header("content-type", "application/x-www-form-urlencoded")
+        .body("state='email-login'&autoLoginYn='N'&userId=" + USER_ID + "&userPwd=" + USER_PWD)
+        .asString();
+
+        /*
+        cookie_header = r.headers['set-cookie']
+            num_iuid = cookie_header.find('iuid=')
+            num_token = cookie_header.find('Token=')
+            self.iuid = cookie_header[num_iuid:num_iuid + 12]
+            self.token = cookie_header[num_token:num_token + 36]
+        */
+        
+        /*msg = thecampy.Message([力格], [郴侩(1500磊 捞窍)])
+
+        image = thecampy.ThecampyImage('sample.png')
+
+        tc = thecampy.Client(email, pw)
+
+        tc.get_soldier(my_soldier) #returns soldier code
+
+        tc.send_message(my_soldier, msg, image)*/
     } 
 }

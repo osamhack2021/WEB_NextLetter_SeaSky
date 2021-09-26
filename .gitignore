@@ -1,10 +1,10 @@
 .vscode/*
 .apache-tomcat-8.0.53/*
-SpringPRJ/target/*
 node_modules
 .project
 .classpath
 .setting
-*/target/*
 SpringPRJ/.settings/*
 SpringPRJ/.metadata/*
+SpringPRJ/target/*
+apache-tomcat-8.0.53/*

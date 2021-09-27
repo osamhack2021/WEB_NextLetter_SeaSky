@@ -30,5 +30,4 @@ public class TestController {
 		
 		return "/test/MessageTest";
 	}
-
 }

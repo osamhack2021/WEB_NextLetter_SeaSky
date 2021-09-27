@@ -7,7 +7,7 @@
 <title>더캠프 메시지 발송 테스트</title>
 </head>
 <body>
-	<form action="/sendMessage.do">
+	<form action="/message/send.do">
 	
 		<h5>더캠프 아이디</h5>
 		아이디 : <input type="text" name="id" value="hkgo6040@naver.com" readonly><br/>
@@ -35,7 +35,7 @@
 		</select>
 		<hr/>
 		
-		<h5>입대자 정보(Soldier)</h5>
+		<h5>편지 내용(Message)</h5>
 		제목 : <input type="text" name="title"><br/>
 		내용 : <textarea name="content"></textarea><br/><br/>
 		

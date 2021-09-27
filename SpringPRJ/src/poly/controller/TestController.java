@@ -23,5 +23,12 @@ public class TestController {
 		return "/test";
 	}
 	
+	
+
+	@RequestMapping(value = "/test/MessageTest")
+	public String MessageTest() throws Exception {
+		
+		return "/test/MessageTest";
+	}
 
 }

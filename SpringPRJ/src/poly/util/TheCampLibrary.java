@@ -60,6 +60,8 @@ public class TheCampLibrary {
 		        .header("content-type", "application/x-www-form-urlencoded")
 		        .body("state='email-login'&autoLoginYn='N'&userId=" + uDTO.getThecamp_id() + "&userPwd=" + uDTO.getThecamp_pw())
 		        .asString();
+		
+		System.out.println("login_response : " + login_response.getBody().toString());
 		        
         CookieDTO cDTO = new CookieDTO();
         if(login_response.getBody() == null || login_response.getBody().length() < 1) {
@@ -119,7 +121,7 @@ public class TheCampLibrary {
         		
         		if(jsonArray.size() < 1) {
         			//Msg. 해당하는 군인을 찾을 수 없습니다.
-        			
+        			System.out.println("해당하는 군인을 찾을 수 없습니다.");
         		}else {
         			JsonObject soldierJsonObj = jsonArray.get(0).getAsJsonObject();
         			soldier_code = soldierJsonObj.get("traineeMgrSeq").getAsString();
@@ -140,6 +142,8 @@ public class TheCampLibrary {
         	          .field("enterDate", sDTO.getEnterDate())
         	          .asString();
         	        
+        	System.out.println("add_solider_response : " + add_solider_response.getBody().toString());
+        	
 	        if(add_solider_response.getBody() == null || add_solider_response.getBody().length() < 1) {
 	        	//Msg. 응답 값이 없습니다.
 	        }else if(add_solider_response.getStatus() == 200) {
@@ -180,6 +184,7 @@ public class TheCampLibrary {
         	  .asString();
         	
         	System.out.println(msg_response.getBody().toString());
+        	
         	if(msg_response.getBody() == null || msg_response.getBody().length() < 1) {
             	//Msg. 응답 값이 없습니다.
             }else if(msg_response.getStatus() == 200) {

@@ -21,27 +21,27 @@ public class TheCampIndex {
      * @throws ParseException 
      */
     public static void main(String[] args) throws UnirestException {
-        //´õÄ·ÇÁ ·Î±×ÀÎ Á¤º¸
+        //ë”ìº í”„ ë¡œê·¸ì¸ ì •ë³´
     	UserDTO uDTO = new UserDTO();
         String thecamp_id="hkgo6040@naver.com";
         uDTO.setThecamp_id(thecamp_id);
         String thecamp_pw="seasky1!";
         uDTO.setThecamp_pw(thecamp_pw);
 
-        //ÀÔ´ëÀÚ Á¤º¸
+        //ì…ëŒ€ì ì •ë³´
         SoldierDTO sDTO = new SoldierDTO();
-        String name="±è¶¯¶¯";
+        String name="ê¹€ë•¡ë•¡";
         sDTO.setName(name);
         
         String birth="20010616";
         sDTO.setBirth(birth);
         
-        String missSoldierClassCdNm="¿¹ºñ±ºÀÎ/ÈÆ·Ãº´";
+        String missSoldierClassCdNm="ì˜ˆë¹„êµ°ì¸/í›ˆë ¨ë³‘";
         sDTO.setMissSoldierClassCdNm(missSoldierClassCdNm);
-        String grpCdNm="À°±º";
+        String grpCdNm="ìœ¡êµ°";
         sDTO.setGrpCdNm(grpCdNm);
         
-        String trainUnitCdNm="À°±ºÈÆ·Ã¼Ò";
+        String trainUnitCdNm="ìœ¡êµ°í›ˆë ¨ì†Œ";
         sDTO.setTrainUnitCdNm(trainUnitCdNm);
         
         String enterDate="20210913";
@@ -53,15 +53,15 @@ public class TheCampIndex {
         
         
         //-----------------------------------------------------------
-        //¹ß¼ÛÇÒ ¸Ş½ÃÁö
-        String title = "´õÄ·ÇÁ ¶óÀÌºê·¯¸® Å×½ºÆ®";
-        String content = "´õÄ·ÇÁ ¶óÀÌºê·¯¸® ¹ß¼ÛÀ» À§ÇÑ Å×½ºÆ® ÁßÀÔ´Ï´Ù. ÀÌ ³»¿ëÀ» Æó±â ÇÏ½Ê½Ã¿À.\n This is TheCamp Test.";
+        //ë°œì†¡í•  ë©”ì‹œì§€
+        String title = "ë”ìº í”„ ë¼ì´ë¸ŒëŸ¬ë¦¬ í…ŒìŠ¤íŠ¸";
+        String content = "ë”ìº í”„ ë¼ì´ë¸ŒëŸ¬ë¦¬ ë°œì†¡ì„ ìœ„í•œ í…ŒìŠ¤íŠ¸ ì¤‘ì…ë‹ˆë‹¤. ì´ ë‚´ìš©ì„ íê¸° í•˜ì‹­ì‹œì˜¤.\n This is TheCamp Test.";
         MessageDTO mDTO = new MessageDTO();
         mDTO.setTitle(title);
         mDTO.setContent(content);
 
         //-----------------------------------------------------------
-        //·Î±×ÀÎ ÄíÅ° ¼ö½Å
+        //ë¡œê·¸ì¸ ì¿ í‚¤ ìˆ˜ì‹ 
         HttpResponse<String> login_response = Unirest.post("https://www.thecamp.or.kr/login/loginA.do")
         .header("content-type", "application/x-www-form-urlencoded")
         .body("state='email-login'&autoLoginYn='N'&userId=" + uDTO.getThecamp_id() + "&userPwd=" + uDTO.getThecamp_pw())
@@ -69,19 +69,19 @@ public class TheCampIndex {
         
         CookieDTO cDTO = new CookieDTO();
         if(login_response.getBody() == null || login_response.getBody().length() < 1) {
-        	//Msg. ÀÀ´ä °ªÀÌ ¾ø½À´Ï´Ù.
-        	System.out.println("Msg. ÀÀ´ä °ªÀÌ ¾ø½À´Ï´Ù.");
+        	//Msg. ì‘ë‹µ ê°’ì´ ì—†ìŠµë‹ˆë‹¤.
+        	System.out.println("Msg. ì‘ë‹µ ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
         }else if(login_response.getStatus() == 200) {
-        	//Msg. ÀÀ´äÀº ¼º°ø
-        	System.out.println("Msg. ÀÀ´äÀº ¼º°ø");
+        	//Msg. ì‘ë‹µì€ ì„±ê³µ
+        	System.out.println("Msg. ì‘ë‹µì€ ì„±ê³µ");
 	    	JsonParser jsonParser = new JsonParser();
 	    	JsonObject jsonObj = jsonParser.parse(login_response.getBody()).getAsJsonObject();
         	if(!jsonObj.get("resultCd").getAsString().equals("0000")) {
-        		//Msg. ¾Ë¼ö ¾ø´Â ¿¡·¯
-        		System.out.println("Msg. ¾Ë¼ö ¾ø´Â ¿¡·¯");
+        		//Msg. ì•Œìˆ˜ ì—†ëŠ” ì—ëŸ¬
+        		System.out.println("Msg. ì•Œìˆ˜ ì—†ëŠ” ì—ëŸ¬");
         	}else if(login_response.getHeaders().get("Set-Cookie") == null || login_response.getHeaders().get("Set-Cookie").toString().length() < 1){
-            	//Msg. ÄíÅ°¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.
-            	System.out.println("Msg. ÄíÅ°¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+            	//Msg. ì¿ í‚¤ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+            	System.out.println("Msg. ì¿ í‚¤ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }else {
             	String cookie_header = login_response.getHeaders().get("Set-Cookie").toString();
                 System.out.println(cookie_header);
@@ -91,10 +91,10 @@ public class TheCampIndex {
                 String token = cookie_header.substring(token_index + 6, token_index + 36);
             
                 if(iuid.length() < 1 || token.length() < 1) {
-                	//Msg. ÀÀ´ä °ªÀÌ ¾ø½À´Ï´Ù.
-                	System.out.println("Msg. ÀÀ´ä °ªÀÌ ¾ø½À´Ï´Ù.");
+                	//Msg. ì‘ë‹µ ê°’ì´ ì—†ìŠµë‹ˆë‹¤.
+                	System.out.println("Msg. ì‘ë‹µ ê°’ì´ ì—†ìŠµë‹ˆë‹¤.");
                 } 
-                System.out.println("Msg. ¼º°ø.");
+                System.out.println("Msg. ì„±ê³µ.");
                 cDTO.setIuid(iuid);
                 cDTO.setToken(token);
                 System.out.println("iuid : " + iuid + "\ntoken : " + token);
@@ -102,8 +102,8 @@ public class TheCampIndex {
         }
         
         //-----------------------------------------------------------
-        //ÁÖ¾îÁø ÈÆ·Ãº´ÀÇ °íÀ¯ id(code) Á¶È¸ => µî·ÏµÇ¾îÀÖÁö ¾ÊÀº ÈÆ·Ãº´ÀÌ¸é µî·Ï ÈÄ Á¶È¸
-        //ÄíÅ° ¼öÁı ÈÄ ½ÇÇà
+        //ì£¼ì–´ì§„ í›ˆë ¨ë³‘ì˜ ê³ ìœ  id(code) ì¡°íšŒ => ë“±ë¡ë˜ì–´ìˆì§€ ì•Šì€ í›ˆë ¨ë³‘ì´ë©´ ë“±ë¡ í›„ ì¡°íšŒ
+        //ì¿ í‚¤ ìˆ˜ì§‘ í›„ ì‹¤í–‰
         String soldier_code = "";
         HttpResponse<String> cafe_response = Unirest.post("https://www.thecamp.or.kr/main/cafeCreateCheckA.do")
           .header("Content-Type", "application/x-www-form-urlencoded")
@@ -118,19 +118,19 @@ public class TheCampIndex {
         System.out.println("cafe_response : " + cafe_response.getBody().toString());
         
         if(cafe_response.getBody() == null || cafe_response.getBody().length() < 1) {
-        	//Msg. ÀÀ´ä °ªÀÌ ¾ø½À´Ï´Ù.
+        	//Msg. ì‘ë‹µ ê°’ì´ ì—†ìŠµë‹ˆë‹¤.
         }else if(cafe_response.getStatus() == 200) {
-        	//Msg. ÀÀ´äÀº ¼º°ø
+        	//Msg. ì‘ë‹µì€ ì„±ê³µ
         	JsonParser jsonParser = new JsonParser();
 	        JsonObject jsonObj = jsonParser.parse(cafe_response.getBody()).getAsJsonObject();
         	if(!jsonObj.get("resultCd").getAsString().equals("9999")) {
-        		//Msg. ¾Ë¼ö ¾ø´Â ¿¡·¯
+        		//Msg. ì•Œìˆ˜ ì—†ëŠ” ì—ëŸ¬
         		String error_msg = jsonObj.get("resultMsg").getAsString();
         	}else {
         		JsonArray jsonArray = jsonParser.parse(jsonObj.get("listResult").toString()).getAsJsonArray();
         		
         		if(jsonArray.size() < 1) {
-        			//Msg. ÇØ´çÇÏ´Â ±ºÀÎÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.
+        			//Msg. í•´ë‹¹í•˜ëŠ” êµ°ì¸ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
         			
         		}else {
         			JsonObject soldierJsonObj = jsonArray.get(0).getAsJsonObject();
@@ -141,14 +141,14 @@ public class TheCampIndex {
         }
         
         if(soldier_code.length() < 1) {
-        	//¾Æ·¡ÀÇ ÈÆ·Ãº´ µî·Ï ÄÚµå ½ÇÇà
+        	//ì•„ë˜ì˜ í›ˆë ¨ë³‘ ë“±ë¡ ì½”ë“œ ì‹¤í–‰
         }
         
         
         //-----------------------------------------------------------
-        //The campÀÇ º¸°í½ÍÀº ±ºÀÎ¿¡ ÁÖ¾îÁø ÈÆ·Ãº´À» Ãß°¡ÇÕ´Ï´Ù.
-        //ÄíÅ° ¼öÁı ÈÄ ½ÇÇà
-        //TODO Å×½ºÆ® ÇÊ¿ä
+        //The campì˜ ë³´ê³ ì‹¶ì€ êµ°ì¸ì— ì£¼ì–´ì§„ í›ˆë ¨ë³‘ì„ ì¶”ê°€í•©ë‹ˆë‹¤.
+        //ì¿ í‚¤ ìˆ˜ì§‘ í›„ ì‹¤í–‰
+        //TODO í…ŒìŠ¤íŠ¸ í•„ìš”
         HttpResponse<String> add_solider_response = Unirest.post("https://www.thecamp.or.kr/missSoldier/insertDirectMissSoldierA.do")
           .header("Content-Type", "application/x-www-form-urlencoded")
           .header("Cookie", "Token=" + cDTO.getToken() + "; iuid=" + cDTO.getIuid())
@@ -162,28 +162,28 @@ public class TheCampIndex {
           .asString();
         
         if(add_solider_response.getBody() == null || add_solider_response.getBody().length() < 1) {
-        	//Msg. ÀÀ´ä °ªÀÌ ¾ø½À´Ï´Ù.
+        	//Msg. ì‘ë‹µ ê°’ì´ ì—†ìŠµë‹ˆë‹¤.
         }else if(add_solider_response.getStatus() == 200) {
-        	//Msg. ÀÀ´äÀº ¼º°ø
+        	//Msg. ì‘ë‹µì€ ì„±ê³µ
         	JsonParser jsonParser = new JsonParser();
 	        JsonObject jsonObj = jsonParser.parse(cafe_response.getBody()).getAsJsonObject();
 	        
 	        String resultCd = jsonObj.get("resultCd").getAsString();
         	if(!resultCd.equals("0000") && !resultCd.equals("E001")) {
-        		//Msg. ¾Ë ¼ö ¾ø´Â ¿¡·¯
+        		//Msg. ì•Œ ìˆ˜ ì—†ëŠ” ì—ëŸ¬
         	}
         		
         }
-        //Ãß°¡ ÈÄ À§ÀÇ ±ºÀÎ ÄÚµå Á¶È¸ Àç½ÇÇà
+        //ì¶”ê°€ í›„ ìœ„ì˜ êµ°ì¸ ì½”ë“œ ì¡°íšŒ ì¬ì‹¤í–‰
         
         
         //-----------------------------------------------------------
-        //ÁÖ¾îÁø Message¸¦ ÁÖ¾îÁø Soldier¿¡°Ô the camp ÀÎÅÍ³İ ÆíÁö·Î ¹ß¼ÛÇÕ´Ï´Ù.
-        //ÄíÅ° ¼öÁı ÈÄ ½ÇÇà
-        if(!sDTO.getMissSoldierClassCdNm().equals("¿¹ºñ±ºÀÎ/ÈÆ·Ãº´")) {
-        	//¿¹ºñ±ºÀÎ/ÈÆ·Ãº´¿¡°Ô¸¸ ÆíÁö¸¦ º¸³¾ ¼ö ÀÖ½À´Ï´Ù.
+        //ì£¼ì–´ì§„ Messageë¥¼ ì£¼ì–´ì§„ Soldierì—ê²Œ the camp ì¸í„°ë„· í¸ì§€ë¡œ ë°œì†¡í•©ë‹ˆë‹¤.
+        //ì¿ í‚¤ ìˆ˜ì§‘ í›„ ì‹¤í–‰
+        if(!sDTO.getMissSoldierClassCdNm().equals("ì˜ˆë¹„êµ°ì¸/í›ˆë ¨ë³‘")) {
+        	//ì˜ˆë¹„êµ°ì¸/í›ˆë ¨ë³‘ì—ê²Œë§Œ í¸ì§€ë¥¼ ë³´ë‚¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
         }else if(soldier_code.length() < 1){
-        	//ÈÆ·Ãº´ ½Äº°ÄÚµå¸¦ ¹ŞÁö ¸øÇÏ¿´½À´Ï´Ù.
+        	//í›ˆë ¨ë³‘ ì‹ë³„ì½”ë“œë¥¼ ë°›ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤.
         }else {
         	HttpResponse<String> msg_response = Unirest.post("https://www.thecamp.or.kr/consolLetter/insertConsolLetterA.do?")
         	  .header("Content-Type", "application/x-www-form-urlencoded")
@@ -197,13 +197,13 @@ public class TheCampIndex {
         	
         	System.out.println(msg_response.getBody().toString());
         	if(msg_response.getBody() == null || msg_response.getBody().length() < 1) {
-            	//Msg. ÀÀ´ä °ªÀÌ ¾ø½À´Ï´Ù.
+            	//Msg. ì‘ë‹µ ê°’ì´ ì—†ìŠµë‹ˆë‹¤.
             }else if(msg_response.getStatus() == 200) {
-            	//Msg. ÀÀ´äÀº ¼º°ø
+            	//Msg. ì‘ë‹µì€ ì„±ê³µ
             	JsonParser jsonParser = new JsonParser();
     	        JsonObject jsonObj = jsonParser.parse(msg_response.getBody()).getAsJsonObject();
             	if(!jsonObj.get("resultCd").getAsString().equals("0000")) {
-            		//Msg. ¾Ë¼ö ¾ø´Â ¿¡·¯
+            		//Msg. ì•Œìˆ˜ ì—†ëŠ” ì—ëŸ¬
             		String error_msg = jsonObj.get("resultMsg").getAsString();
             	}
             }

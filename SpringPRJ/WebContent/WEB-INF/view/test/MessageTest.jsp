@@ -1,52 +1,52 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>´õÄ·ÇÁ ¸Þ½ÃÁö ¹ß¼Û Å×½ºÆ®</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ë”ìº í”„ ë©”ì‹œì§€ ë°œì†¡ í…ŒìŠ¤íŠ¸</title>
 </head>
 <body>
 	<form action="/message/send.do">
 	
-		<h5>´õÄ·ÇÁ ¾ÆÀÌµð</h5>
-		¾ÆÀÌµð : <input type="text" name="id" value="hkgo6040@naver.com" readonly><br/>
-		ºñ¹Ð¹øÈ£ : <input type="text" name="pw" value="seasky1!" readonly>
+		<h5>ë”ìº í”„ ì•„ì´ë””</h5>
+		ì•„ì´ë”” : <input type="text" name="id" value="hkgo6040@naver.com" readonly><br/>
+		ë¹„ë°€ë²ˆí˜¸ : <input type="text" name="pw" value="seasky1!" readonly>
 		<hr/>
 		
-		<h5>ÀÔ´ëÀÚ Á¤º¸(Soldier)</h5>
-		¼ººÐ(default) : <input type="text" name="missSoldierClassCdNm" value="¿¹ºñ±ºÀÎ/ÈÆ·Ãº´" readonly><br/>
-		±ºÁ¾(default) :<input type="text" name="grpCdNm" value="À°±º" readonly><br/>
-		ÀÌ¸§ : <input type="text" name="name"><br/>
-		»ý³â¿ùÀÏ : <input type="text" name="birth"><br/>
-		ÀÔ¿µºÎ´ë : 
+		<h5>ìž…ëŒ€ìž ì •ë³´(Soldier)</h5>
+		ì„±ë¶„(default) : <input type="text" name="missSoldierClassCdNm" value="ì˜ˆë¹„êµ°ì¸/í›ˆë ¨ë³‘" readonly><br/>
+		êµ°ì¢…(default) :<input type="text" name="grpCdNm" value="ìœ¡êµ°" readonly><br/>
+		ì´ë¦„ : <input type="text" name="name"><br/>
+		ìƒë…„ì›”ì¼(8ìžë¦¬) : <input type="text" name="birth"><br/>
+		ìž…ì˜ë¶€ëŒ€ : 
 		<select name="trainUnitCdNm" id="trainUnitCdNm">
 		</select><br/>
-		ÀÔ¿µÀÏ(8ÀÚ¸®) : <input type="text" name="enterDate"><br/>
-		°ü°è : 
+		ìž…ì˜ì¼(8ìžë¦¬) : <input type="text" name="enterDate"><br/>
+		ê´€ê³„ : 
 		<select name="trainUnitCdNm">
-		    <option value="PARENT">ºÎ¸ð</option>
-		    <option value="SPOUSE">¹è¿ìÀÚ</option>
-		    <option value="SIBLING">ÇüÁ¦/ÀÚ¸Å</option>
-		    <option value="FRIEND">Ä£±¸</option>
-		    <option value="LOVER">¾ÖÀÎ</option>
-		    <option value="RELATIVE">Ä£Ã´</option>
-		    <option value="FAN">ÆÒ</option>
+		    <option value="PARENT">ë¶€ëª¨</option>
+		    <option value="SPOUSE">ë°°ìš°ìž</option>
+		    <option value="SIBLING">í˜•ì œ/ìžë§¤</option>
+		    <option value="FRIEND">ì¹œêµ¬</option>
+		    <option value="LOVER">ì• ì¸</option>
+		    <option value="RELATIVE">ì¹œì²™</option>
+		    <option value="FAN">íŒ¬</option>
 		</select>
 		<hr/>
 		
-		<h5>ÆíÁö ³»¿ë(Message)</h5>
-		Á¦¸ñ : <input type="text" name="title"><br/>
-		³»¿ë : <textarea name="content"></textarea><br/><br/>
+		<h5>íŽ¸ì§€ ë‚´ìš©(Message)</h5>
+		ì œëª© : <input type="text" name="title" value="ë”ìº í”„ ë¼ì´ë¸ŒëŸ¬ë¦¬ í…ŒìŠ¤íŠ¸"><br/>
+		ë‚´ìš© : <textarea name="content">ë”ìº í”„ ë¼ì´ë¸ŒëŸ¬ë¦¬ ë°œì†¡ì„ ìœ„í•œ í…ŒìŠ¤íŠ¸ ì¤‘ìž…ë‹ˆë‹¤. ì´ ë‚´ìš©ì„ íê¸° í•˜ì‹­ì‹œì˜¤.\n This is TheCamp Test.</textarea><br/><br/>
 		
-		<input type="submit" value="¹ß¼Û">
+		<input type="submit" value="ë°œì†¡">
 		
 	</form>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var division = "1»ç´Ü,2»ç´Ü,3»ç´Ü,5»ç´Ü,6»ç´Ü,7»ç´Ü,9»ç´Ü,11»ç´Ü,12»ç´Ü,15»ç´Ü,17»ç´Ü,20»ç´Ü,21»ç´Ü,22»ç´Ü,23»ç´Ü,25»ç´Ü,27»ç´Ü,28»ç´Ü,30»ç´Ü,31»ç´Ü,32»ç´Ü,35»ç´Ü,36»ç´Ü,37»ç´Ü,39»ç´Ü,50»ç´Ü,51»ç´Ü,53»ç´Ü,À°±ºÈÆ·Ã¼Ò,À°±ºÈÆ·Ã¼Ò(23¿¬´ë),À°±ºÈÆ·Ã¼Ò(25¿¬´ë),À°±ºÈÆ·Ã¼Ò(26¿¬´ë),À°±ºÈÆ·Ã¼Ò(27¿¬´ë),À°±ºÈÆ·Ã¼Ò(28¿¬´ë),À°±ºÈÆ·Ã¼Ò(29¿¬´ë),À°±ºÈÆ·Ã¼Ò(30¿¬´ë)";
+			var division = "1ì‚¬ë‹¨,2ì‚¬ë‹¨,3ì‚¬ë‹¨,5ì‚¬ë‹¨,6ì‚¬ë‹¨,7ì‚¬ë‹¨,9ì‚¬ë‹¨,11ì‚¬ë‹¨,12ì‚¬ë‹¨,15ì‚¬ë‹¨,17ì‚¬ë‹¨,20ì‚¬ë‹¨,21ì‚¬ë‹¨,22ì‚¬ë‹¨,23ì‚¬ë‹¨,25ì‚¬ë‹¨,27ì‚¬ë‹¨,28ì‚¬ë‹¨,30ì‚¬ë‹¨,31ì‚¬ë‹¨,32ì‚¬ë‹¨,35ì‚¬ë‹¨,36ì‚¬ë‹¨,37ì‚¬ë‹¨,39ì‚¬ë‹¨,50ì‚¬ë‹¨,51ì‚¬ë‹¨,53ì‚¬ë‹¨,ìœ¡êµ°í›ˆë ¨ì†Œ,ìœ¡êµ°í›ˆë ¨ì†Œ(23ì—°ëŒ€),ìœ¡êµ°í›ˆë ¨ì†Œ(25ì—°ëŒ€),ìœ¡êµ°í›ˆë ¨ì†Œ(26ì—°ëŒ€),ìœ¡êµ°í›ˆë ¨ì†Œ(27ì—°ëŒ€),ìœ¡êµ°í›ˆë ¨ì†Œ(28ì—°ëŒ€),ìœ¡êµ°í›ˆë ¨ì†Œ(29ì—°ëŒ€),ìœ¡êµ°í›ˆë ¨ì†Œ(30ì—°ëŒ€)";
 			
 			var items = division.split(',');
 			items.forEach(function(item) {
@@ -57,7 +57,7 @@
 		
 	</script>
 	<p>
-		ÀÚ¼¼ÇÑ ¾Ë°í¸®Áò°ú ¿¡·¯½Ã ¹ß»ýÇÏ´Â ¸Þ½ÃÁö´Â ¾Æ·¡ °æ·ÎÀÇ Å×½ºÆ® ÆÄÀÏÀ» Âü°íÇØÁÖ¼¼¿ä!<br>
+		ìžì„¸í•œ ì•Œê³ ë¦¬ì¦˜ê³¼ ì—ëŸ¬ì‹œ ë°œìƒí•˜ëŠ” ë©”ì‹œì§€ëŠ” ì•„ëž˜ ê²½ë¡œì˜ í…ŒìŠ¤íŠ¸ íŒŒì¼ì„ ì°¸ê³ í•´ì£¼ì„¸ìš”!<br>
 		SpringPRJ/src/poly/util/TheCampLibrary.java
 	</p>
 </body>

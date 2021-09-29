@@ -109,6 +109,7 @@ public class TheCampLibrary {
         
         if(cafe_response.getBody() == null || cafe_response.getBody().length() < 1) {
         	//Msg. 응답 값이 없습니다.
+        	soldier_code = "soldier_code";
         }else if(cafe_response.getStatus() == 200) {
         	//Msg. 응답은 성공
         	JsonParser jsonParser = new JsonParser();
@@ -116,12 +117,13 @@ public class TheCampLibrary {
         	if(!jsonObj.get("resultCd").getAsString().equals("9999")) {
         		//Msg. 알수 없는 에러
         		String error_msg = jsonObj.get("resultMsg").getAsString();
+        		soldier_code = error_msg;
         	}else {
         		JsonArray jsonArray = jsonParser.parse(jsonObj.get("listResult").toString()).getAsJsonArray();
         		
         		if(jsonArray.size() < 1) {
         			//Msg. 해당하는 군인을 찾을 수 없습니다.
-        			System.out.println("해당하는 군인을 찾을 수 없습니다.");
+        			soldier_code = "해당하는 군인을 찾을 수 없습니다.";
         		}else {
         			JsonObject soldierJsonObj = jsonArray.get(0).getAsJsonObject();
         			soldier_code = soldierJsonObj.get("traineeMgrSeq").getAsString();
@@ -146,6 +148,7 @@ public class TheCampLibrary {
         	
 	        if(add_solider_response.getBody() == null || add_solider_response.getBody().length() < 1) {
 	        	//Msg. 응답 값이 없습니다.
+	        	soldier_code = "응답 값이 없습니다.";
 	        }else if(add_solider_response.getStatus() == 200) {
 	        	//Msg. 응답은 성공
 	        	JsonParser jsonParser = new JsonParser();
@@ -154,8 +157,9 @@ public class TheCampLibrary {
 		        String resultCd = jsonObj.get("resultCd").getAsString();
 	        	if(!resultCd.equals("0000") && !resultCd.equals("E001")) {
 	        		//Msg. 알 수 없는 에러
+	        		soldier_code = "알 수 없는 에러";
 	        	}else {
-	        		soldier_code = getSoliderCode(uDTO, sDTO);
+	        		soldier_code = "scuccess//" + getSoliderCode(uDTO, sDTO);
 	        	}
 	        }
 	        
@@ -170,10 +174,11 @@ public class TheCampLibrary {
 		if(!sDTO.getMissSoldierClassCdNm().equals("예비군인/훈련병")) {
         	//예비군인/훈련병에게만 편지를 보낼 수 있습니다.
 			msg = "예비군인/훈련병에게만 편지를 보낼 수 있습니다.";
-        }else if(soldier_code.length() < 1){
+        }else if(!soldier_code.contains("scuccess//")){
         	//훈련병 식별코드를 받지 못하였습니다.
-        	msg = "훈련병 식별코드를 받지 못하였습니다.";
+        	msg = soldier_code;
         }else {
+        	soldier_code = soldier_code.replaceAll("scuccess//", "");
         	HttpResponse<String> msg_response = Unirest.post("https://www.thecamp.or.kr/consolLetter/insertConsolLetterA.do?")
         	  .header("Content-Type", "application/x-www-form-urlencoded")
         	  .header("Cookie", "Token=" + cDTO.getToken() + "; iuid=" + cDTO.getIuid())

@@ -32,7 +32,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="profile.html">프로필</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,9 +49,9 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <a class="dropdown-item" href="#">로그인</a>
-              <a class="dropdown-item" href="#">회원가입</a>
+            <div class="nav-item d-flex">
+              <button class="btn btn-outline-success me-2" type="button" onclick="location.href='login.html'">로그인</button>
+              <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='register.html'">회원가입</button>
             </form>
           </div>
         </div>
@@ -60,9 +60,10 @@
   </div>
 
 
+
   <!-- 로그인 -->
   <div class="container">
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center m-2">
       <div class="col my-5 border border-3 border-dark rounded">
         <h1 class="text-center m-3">로그인</h1>
 

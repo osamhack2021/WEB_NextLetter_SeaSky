@@ -1,4 +1,4 @@
-package poly.util;
+package poly.mail;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

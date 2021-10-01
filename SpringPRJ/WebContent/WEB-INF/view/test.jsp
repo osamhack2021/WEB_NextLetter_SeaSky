@@ -9,15 +9,11 @@
 <title>Insert title here</title>
 <body>
 	<form action="https://www.airforce.mil.kr/user/emailPicSaveEmail.action" method="POST">
-			<input type="hidden" id="siteId" name="siteId" value="last2">
-			<input type="hidden" id="parent" name="parent" value="%2Fuser%2FindexSub.action%3FcodyMenuSeq%3D156893223%26siteId%3Dlast2%26menuUIType%3Dsub%26dum%3Ddum%26command2%3DwriteEmail%26searchCate%3D%26searchVal%3D%26page%3D1">
-			<input type="hidden" id="page" name="page" value="1">
-			<input type="hidden" id="command2" name="command2" value="writeEmail">
-			
-			<!-- 주소 -->
-			<input type="text" id="senderZipcode" name="senderZipcode" value="31232" class="UItext" size="8" maxlength="8" readonly="readonly">	<br>
-			<input type="text" id="senderAddr1" name="senderAddr1" value="충청남도 천안시 동남구 목천읍 독립기념관로 1" class="UItext W50p" readonly="readonly" onclick="javascript:alert('우편번호 검색을 통해서 입력하세요!');"><br>
-			<input type="text" id="senderAddr2" name="senderAddr2" value="123" class="UItext W50p"><br>
+			<input type="text" id="siteId" name="siteId" value="last2">
+			<input type="text" id="command2" name="command2" value="writeEmail">
+			<!-- 2021-06-01 세션 끊김 대비 start-->
+			<input type="text" id="memberSeqVal" name="memberSeqVal" value="278989392">
+			<input type="text" id="sodaeVal" name="sodaeVal" value="3404"><!-- 3중대 4소대 04번 -->
 			
 			<input type="text" id="senderName" name="senderName" value="더캠프" class="UItext" size="15" maxlength="15"><br>
 			<input type="text" id="relationship" name="relationship" value="더캠프" class="UItext" size="15" maxlength="15"><br>
@@ -26,6 +22,14 @@
 			<textarea id="contents" name="contents" maxlength="1200" class="UItextarea" onkeyup="calContentsCnt(this.value);">더캠프 테스트 중입니다.</textarea><br>
 			<input type="password" id="password" name="password" class="UItext" value="1234"><br>
 			<input type="submit">
-		</form>
+	</form>
 </body>
 </html>
+
+<!--
+	1.교육생 검색
+	https://www.airforce.mil.kr/user/emailPicViewSameMembers.action?siteId=last2&searchName=오승완&searchBirth=20030124
+	2.html 파싱 -> if 입대날짜. memberSeqVal, sodaeVal  <input type="button" class="choice" value="선택하기" onclick="resultSelect('278989392')">
+	3.개인페이지
+	https://www.airforce.mil.kr/user/indexSub.action?codyMenuSeq=156893223&siteId=last2&menuUIType=sub&dum=dum&command2=getEmailList&searchName=%EC%98%A4%EC%8A%B9%EC%99%84&searchBirth=20030124&memberSeq=278989392
+ -->

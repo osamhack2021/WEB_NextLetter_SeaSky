@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import poly.dto.MessageDTO;
 import poly.dto.SoldierDTO;
 import poly.dto.UserDTO;
-import poly.service.ITestService;
+import poly.mail.AirForceLibrary;
+import poly.mail.TheCampLibrary;
 import poly.util.CmmUtil;
-import poly.util.TheCampLibrary;
 
 @Controller
 @RequestMapping("/message")
@@ -21,16 +21,16 @@ public class MessageController {
 //	@Resource(name = "MessageService")
 //	private ITestService messageService;
 
-	@RequestMapping(value = "/send")
-	public String send(ServletRequest request ,Model model) throws Exception {
-		//´õÄ·ÇÁ ·Î±×ÀÎ Á¤º¸
+	@RequestMapping(value = "/sendThecamp")
+	public String sendThecamp(ServletRequest request ,Model model) throws Exception {
+		//ë”ìº í”„ ë¡œê·¸ì¸ ì •ë³´
     	UserDTO uDTO = new UserDTO();
         String thecamp_id = CmmUtil.nvl((String) request.getParameter("id"));
         uDTO.setThecamp_id(thecamp_id);
         String thecamp_pw = CmmUtil.nvl((String) request.getParameter("pw"));
         uDTO.setThecamp_pw(thecamp_pw);
 
-        //ÀÔ´ëÀÚ Á¤º¸
+      //ì…ëŒ€ì ì •ë³´
         SoldierDTO sDTO = new SoldierDTO();
         String name = CmmUtil.nvl((String) request.getParameter("name"));
         sDTO.setName(name);
@@ -48,7 +48,7 @@ public class MessageController {
         sDTO.setMissSoldierRelationship(missSoldierRelationship);
 
         
-        //¹ß¼ÛÇÒ ¸Ş½ÃÁö
+        //ë°œì†¡í•  ë©”ì‹œì§€
         String title = CmmUtil.nvl((String) request.getParameter("title"));
         String content = CmmUtil.nvl((String) request.getParameter("content"));
         MessageDTO mDTO = new MessageDTO();
@@ -59,7 +59,7 @@ public class MessageController {
 			String soldier_code = TheCampLibrary.getSoliderCode(uDTO, sDTO);
 			String msg = TheCampLibrary.sendMsg(uDTO, sDTO, soldier_code, mDTO);
 			if(msg.equals("success")) {
-				model.addAttribute("msg", "ÀÎÅÍ³İÆíÁö ¹ß¼ÛÀ» ¼º°øÇß½À´Ï´Ù.");
+				model.addAttribute("msg", "ë°œì†¡ì— ì„±ê³µí–ˆìŠµë‹ˆë‹¤.");
 			}else {
 				model.addAttribute("msg", msg);
 			}
@@ -67,9 +67,54 @@ public class MessageController {
         } catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			model.addAttribute("msg", "¹ß¼Û¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
+			model.addAttribute("msg", "ë°œì†¡ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 		}
 
+		model.addAttribute("url", "/test/MessageTest.do");
+		return "/alert";
+	}
+	
+	@RequestMapping(value = "/sendAirforce")
+	public String sendAirforce(ServletRequest request ,Model model) throws Exception {
+		//ì…ëŒ€ì ì •ë³´
+		SoldierDTO sDTO = new SoldierDTO();
+		
+        String name = CmmUtil.nvl((String) request.getParameter("name"));
+        sDTO.setName(name);
+        String birth = CmmUtil.nvl((String) request.getParameter("birth"));
+        sDTO.setBirth(birth);
+        String enterDate = CmmUtil.nvl((String) request.getParameter("enterDate"));
+        sDTO.setEnterDate(enterDate);
+		
+        MessageDTO mDTO = new MessageDTO();
+		
+		String title = CmmUtil.nvl((String) request.getParameter("title"));
+        String content = CmmUtil.nvl((String) request.getParameter("content"));
+        String pw = CmmUtil.nvl((String) request.getParameter("pw"));
+        String relation = CmmUtil.nvl((String) request.getParameter("relation"));
+        
+        mDTO.setTitle(title);
+        mDTO.setContent(content);
+        mDTO.setPw(pw);
+        mDTO.setRelation(relation);
+        
+		String msg = "";
+		
+		try {
+			msg = AirForceLibrary.sendMsg(sDTO, mDTO);
+			
+			if(msg.equals("success")) {
+				model.addAttribute("msg", "ë°œì†¡ì— ì„±ê³µí–ˆìŠµë‹ˆë‹¤.");
+			}else {
+				model.addAttribute("msg", msg);
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			model.addAttribute("msg", "ë°œì†¡ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
+		}
+		
 		model.addAttribute("url", "/test/MessageTest.do");
 		return "/alert";
 	}

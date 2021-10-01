@@ -11,17 +11,18 @@
   <title>Next Letter</title>
 
   <style>
-    .banner h1 {
-      text-align: left;
+    .login-wrap {
+      height: 100px;
     }
   </style>
 </head>
 <body>
+  <!-- 네비게이션 -->
   <div class="container-fluid">
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Next Letter</a>
+          <a class="navbar-brand" href="index.html">Next Letter</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -49,24 +50,47 @@
               </li>
             </ul>
             <form class="d-flex">
-              <a class="dropdown-item" href="login.html">로그인</a>
-              <a class="dropdown-item" href="register.html">회원가입</a>
+              <a class="dropdown-item" href="#">로그인</a>
+              <a class="dropdown-item" href="#">회원가입</a>
             </form>
           </div>
         </div>
       </nav>
     </div>
+  </div>
 
-  <div class="container-fluid m-5">
-    <div class="banner">
-      <h1>인터넷 편지 자동화 서비스</h1>
-      <p>Next Letter는 예비 훈련병들이 훈련소에서 편지를 보다 쉽게 받길 바라는 마음에서 만들어진 서비스입니다.</p>    
-      <p>기존의 훈련소 홈페이지를 거치지 않고 댓글을 남기듯 인터넷 편지를 남겨보세요!</p>
-      <p>훈련소 퇴소 후 훈련소에서 받았던 편지를 확인할 수도 있습니다!</p>
-      <button type="button" class="btn btn-dark" onClick="location.href='login.html'">시작하기</button>
+
+  <!-- 로그인 -->
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col my-5 border border-3 border-dark rounded">
+        <h1 class="text-center m-3">로그인</h1>
+
+        <div class="col-sm-10 m-auto">
+          <div class="mb-3 row">
+            <label for="inputId" class="col-sm-3 col-form-label">Id</label>
+            <div class="col-sm-9">
+              <input type="id" class="form-control" id="inputId">
+            </div>
+          </div>
+          
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" id="inputPassword">
+            </div>
+          </div>
+
+        <div class="mb-3 row">
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary mb-3">확인</button>
+          </div>
+        </div>
+
+      </div>      
     </div>
   </div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

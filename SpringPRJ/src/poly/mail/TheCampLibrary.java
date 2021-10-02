@@ -109,7 +109,7 @@ public class TheCampLibrary {
         
         if(cafe_response.getBody() == null || cafe_response.getBody().length() < 1) {
         	//Msg. 응답 값이 없습니다.
-        	soldier_code = "soldier_code";
+        	soldier_code = "응답 값이 없습니다. : soldier_code";
         }else if(cafe_response.getStatus() == 200) {
         	//Msg. 응답은 성공
         	JsonParser jsonParser = new JsonParser();
@@ -126,7 +126,7 @@ public class TheCampLibrary {
         			soldier_code = "해당하는 군인을 찾을 수 없습니다.";
         		}else {
         			JsonObject soldierJsonObj = jsonArray.get(0).getAsJsonObject();
-        			soldier_code = soldierJsonObj.get("traineeMgrSeq").getAsString();
+        			soldier_code = "scuccess//" + soldierJsonObj.get("traineeMgrSeq").getAsString();
         		}
         	}
         }
@@ -159,7 +159,7 @@ public class TheCampLibrary {
 	        		//Msg. 알 수 없는 에러
 	        		soldier_code = "알 수 없는 에러";
 	        	}else {
-	        		soldier_code = "scuccess//" + getSoliderCode(uDTO, sDTO);
+	        		soldier_code = getSoliderCode(uDTO, sDTO);
 	        	}
 	        }
 	        
@@ -176,7 +176,8 @@ public class TheCampLibrary {
 			msg = "예비군인/훈련병에게만 편지를 보낼 수 있습니다.";
         }else if(!soldier_code.contains("scuccess//")){
         	//훈련병 식별코드를 받지 못하였습니다.
-        	msg = soldier_code;
+        	System.out.println();
+        	msg = "훈련병 식별코드를 받지 못하였습니다. : " + soldier_code;
         }else {
         	soldier_code = soldier_code.replaceAll("scuccess//", "");
         	HttpResponse<String> msg_response = Unirest.post("https://www.thecamp.or.kr/consolLetter/insertConsolLetterA.do?")
@@ -190,7 +191,7 @@ public class TheCampLibrary {
         	  .field("tempSaveYn", "Y")
         	  .asString();
         	
-        	System.out.println(msg_response.getBody().toString());
+        	System.out.println("sendMsg : " + msg_response.getBody().toString());
         	
         	if(msg_response.getBody() == null || msg_response.getBody().length() < 1) {
             	//Msg. 응답 값이 없습니다.

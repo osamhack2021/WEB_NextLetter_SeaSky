@@ -68,7 +68,7 @@
 		
 		<h5>편지 내용(Message)</h5>
 		제목 : <input type="text" name="title" value="더캠프 라이브러리 테스트"><br/>
-		내용 : <textarea name="content">더캠프 라이브러리 발송을 위한 테스트 중입니다. 이 내용을 폐기 하십시오.\n This is TheCamp Test.</textarea><br/>
+		내용 : <textarea name="content">더캠프 라이브러리 발송을 위한 테스트 중입니다. 이 내용을 폐기 하십시오.\n <br/> This is TheCamp Test.</textarea><br/>
 		비밀번호 : <input type="password" name="pw"><br/>
 		관계 : <input type="text" name="relation" value="더캠프">
 		

@@ -1,13 +1,29 @@
 package poly.dto;
 
 public class MessageDTO {
-    private String title;
+	private String message_no;
+	private String title;
+    private String user_no;
     private String content;
     private String sender;
     private String relation;
     private String pw;
+
+    public String getMessage_no() {
+		return message_no;
+	}
+	public void setMessage_no(String message_no) {
+		this.message_no = message_no;
+	}
+	
 	public String getTitle() {
 		return title;
+	}
+	public String getUser_no() {
+		return user_no;
+	}
+	public void setUser_no(String user_no) {
+		this.user_no = user_no;
 	}
 	public void setTitle(String title) {
 		this.title = title;

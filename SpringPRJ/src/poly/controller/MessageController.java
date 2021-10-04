@@ -12,14 +12,15 @@ import poly.dto.SoldierDTO;
 import poly.dto.UserDTO;
 import poly.mail.AirForceLibrary;
 import poly.mail.TheCampLibrary;
+import poly.service.IMessageService;
 import poly.util.CmmUtil;
 
 @Controller
 @RequestMapping("/message")
 public class MessageController {
 
-//	@Resource(name = "MessageService")
-//	private ITestService messageService;
+	@Resource(name = "MessageService")
+	private IMessageService messageService;
 
 	@RequestMapping(value = "/sendThecamp")
 	public String sendThecamp(ServletRequest request ,Model model) throws Exception {
@@ -51,6 +52,7 @@ public class MessageController {
         //발송할 메시지
         String title = CmmUtil.nvl((String) request.getParameter("title"));
         String content = CmmUtil.nvl((String) request.getParameter("content"));
+        String sender = CmmUtil.nvl((String) request.getParameter("sender"));
         MessageDTO mDTO = new MessageDTO();
         mDTO.setTitle(title);
         mDTO.setContent(content);
@@ -60,6 +62,17 @@ public class MessageController {
 			String msg = TheCampLibrary.sendMsg(uDTO, sDTO, soldier_code, mDTO);
 			if(msg.equals("success")) {
 				model.addAttribute("msg", "발송에 성공했습니다.");
+				
+				mDTO.setRelation(missSoldierRelationship);
+				mDTO.setSender(sender);
+				//로그인 가정.
+				mDTO.setUser_no("1");
+				try {
+					messageService.insertMessage(mDTO);
+				}catch (Exception e) {
+					// TODO: handle exception
+				}
+				
 			}else {
 				model.addAttribute("msg", msg);
 			}
@@ -102,9 +115,14 @@ public class MessageController {
 		
 		try {
 			msg = AirForceLibrary.sendMsg(sDTO, mDTO);
-			
+			System.out.println("msg : " + msg);
 			if(msg.equals("success")) {
 				model.addAttribute("msg", "발송에 성공했습니다.");
+				try {
+					messageService.insertMessage(mDTO);
+				}catch (Exception e) {
+					// TODO: handle exception
+				}
 			}else {
 				model.addAttribute("msg", msg);
 			}

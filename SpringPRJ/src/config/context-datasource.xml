@@ -9,9 +9,9 @@
         class="org.springframework.jdbc.datasource.DriverManagerDataSource"
         lazy-init="false" >
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/스키마명?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul" />
-        <property name="username" value="아이디" />
-        <property name="password" value="비밀번호" />
+        <property name="url" value="jdbc:mysql://20.194.39.15:3306/nextLetter?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul&amp;autoReconnection=true" />
+        <property name="username" value="root" />
+        <property name="password" value="seasky1!" />
     </bean>
     
         <!-- mybatis      -->

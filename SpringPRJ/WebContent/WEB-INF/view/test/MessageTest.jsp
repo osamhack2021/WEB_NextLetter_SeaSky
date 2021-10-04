@@ -31,7 +31,8 @@
 		    <option value="LOVER">애인</option>
 		    <option value="RELATIVE">친척</option>
 		    <option value="FAN">팬</option>
-		</select>
+		</select><br/>
+		발송자 명 : <input type="text" name="sender"><br/>
 		
 		<h5>편지 내용(Message)</h5>
 		제목 : <input type="text" name="title" value="더캠프 라이브러리 테스트"><br/>
@@ -70,7 +71,8 @@
 		제목 : <input type="text" name="title" value="더캠프 라이브러리 테스트"><br/>
 		내용 : <textarea name="content">더캠프 라이브러리 발송을 위한 테스트 중입니다. 이 내용을 폐기 하십시오.\n <br/> This is TheCamp Test.</textarea><br/>
 		비밀번호 : <input type="password" name="pw"><br/>
-		관계 : <input type="text" name="relation" value="더캠프">
+		관계 : <input type="text" name="relation" value="더캠프"><br/>
+		발송자 명 : <input type="text" name="sender"><br/>
 		
 		<input type="submit" value="발송">
 		

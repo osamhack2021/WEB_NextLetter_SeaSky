@@ -85,7 +85,7 @@
 ## 설치 안내 (Installation Process)
 Project Download
 ```bash
-$ git clone git주소
+$ git clone https://github.com/osamhack2021/WEB_NextLetter_SeaSky.git
 ```  
 <br>
 

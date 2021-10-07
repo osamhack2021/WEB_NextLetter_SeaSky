@@ -1,131 +1,139 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-  <title>Next Letter</title>
+    <title>Next Letter</title> 
+ 
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-color: lightcyan;
+        }
+        .container {
+            background: lightcyan;
+        }
 
-  <style>
-    .login-wrap {
-      height: 100px;
-    }
-  </style>
+        @media (min-width: 768px) {
+            .container {
+                width: 553px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 553px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <!-- 네비게이션 -->
-  <div class="container-fluid">
-    <div class="row">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Next Letter</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="profile.html">프로필</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <div class="nav-item d-flex">
-              <button class="btn btn-outline-success me-2" type="button" onclick="location.href='login.html'">로그인</button>
-              <button class="btn btn-sm btn-outline-secondary" type="button" onclick="location.href='register.html'">회원가입</button>
-            </form>
-          </div>
+    <div class="container h-100 align-items-center">
+        <div class="row h-100">
+            <div class="col-sm-12" style="margin-top: 25%">
+                <div class="logo text-center">
+                    <a href="index.html">
+                        <img src="Next Letter-logo.png" style="width: 50%">
+                    </a>
+                </div>
+                <div class="description border mx-5">
+                    <h1 class="text-center">회원가입</h1>
+
+                    <div class="row m-2">
+                        <label for="id" class="col-4">아이디</label>
+                        <div class="col-8">
+                            <input type="text" id="id">
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <label for="password" class="col-4">비밀번호</label>
+                        <div class="col-8">
+                            <input type="password" id="password">
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <label for="birth" class="col-4">생년월일(8자리)</label>
+                        <div class="col-8">
+                            <input type="number" id="birth">
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <label for="enlistment date" class="col-4">입영일(ex.210925)</label>
+                        <div class="col-8">
+                            <input type="number" id="enlistment date">
+                        </div>
+                    </div>
+
+                    <div class="row m-2">
+                        <p class="col-4">군종</p>
+                        <div class="col-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="div_army(event)">
+                                <label class="form-check-label" for="inlineRadio1">육군</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled>
+                                <label class="form-check-label" for="inlineRadio2">해군</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" onclick="div_airforce(event)">
+                                <label class="form-check-label" for="inlineRadio3">공군</label>
+                            </div>
+                        </div>                      
+                    </div>
+                    
+
+                    <!-- 육군 -->
+                    <div id="army" style="display: none;">
+                      <p>더 캠프 아이디</p>
+                      <input type="text">   
+                      <p>더 캠프 비밀번호</p>
+                      <input type="password">
+                      <p>성분</p>
+                      <input type="text">   
+                      <p>군종</p>
+                      <input type="text">   
+                      <p>입영부대</p>
+                      <select name="trainUnitCdNm" id="trainUnitCdNm">
+                        <option value="1사단">1사단</option><option value="2사단">2사단</option><option value="3사단">3사단</option><option value="5사단">5사단</option><option value="6사단">6사단</option><option value="7사단">7사단</option><option value="9사단">9사단</option><option value="11사단">11사단</option><option value="12사단">12사단</option><option value="15사단">15사단</option><option value="17사단">17사단</option><option value="20사단">20사단</option><option value="21사단">21사단</option><option value="22사단">22사단</option><option value="23사단">23사단</option><option value="25사단">25사단</option><option value="27사단">27사단</option><option value="28사단">28사단</option><option value="30사단">30사단</option><option value="31사단">31사단</option><option value="32사단">32사단</option><option value="35사단">35사단</option><option value="36사단">36사단</option><option value="37사단">37사단</option><option value="39사단">39사단</option><option value="50사단">50사단</option><option value="51사단">51사단</option><option value="53사단">53사단</option><option value="육군훈련소">육군훈련소</option><option value="육군훈련소(23연대)">육군훈련소(23연대)</option><option value="육군훈련소(25연대)">육군훈련소(25연대)</option><option value="육군훈련소(26연대)">육군훈련소(26연대)</option><option value="육군훈련소(27연대)">육군훈련소(27연대)</option><option value="육군훈련소(28연대)">육군훈련소(28연대)</option><option value="육군훈련소(29연대)">육군훈련소(29연대)</option><option value="육군훈련소(30연대)">육군훈련소(30연대)</option>
+                      </select>
+                    </div>
+                    
+
+
+                    <!-- 공군 -->
+                    <div id="airforce" style="display: none;">
+
+                    </div>
+
+
+                    <div class="row">
+                        <button class="col-4 mx-auto my-3">회원가입</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
+            
+
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row d-flex justify-content-center m-2 p-5">
-      <div class="col my-5 border border-3 border-dark rounded">
-        <h1 class="text-center p-3">회원가입</h1>
-
-        <div class="col-sm-10 m-auto">
-          <div class="mb-3 row">
-            <label for="inputId" class="col-sm-3 col-form-label">아이디</label>
-            <div class="col-sm-9">
-              <input type="id" class="form-control" id="inputId">
-            </div>
-          </div>
-          
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">비밀번호</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">비밀번호 재확인</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">이름</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">생년월일</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">더 캠프 아이디</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">더 캠프 비밀번호</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-
-          <div class="mb-3 row">
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary mb-3">확인</button>
-            </div>
-          </div>
-
-        </div>  
-      </div>
-    </div>
-  </div>
+    <script src="register.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 
 
+
 # 프로젝트 명
 <!--![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)-->
 <h1 align="center">💌 넥스트 레터</h1>
@@ -97,13 +98,110 @@ Using Web Project
 
 Using JAVA Module
 1. SpringPRJ/src/poly/mail Package 내 .java File 
+2. 육군 더캠프 => TheCampLibrary.java
+	공군 기훈단 => AirForceLibrary.java
+3. 하단의 프로젝트 사용법 참고
 
 ## 프로젝트 사용법 (Getting Started)
+<details markdown="1">
+<summary>육군 더캠프 라이브러리</summary>
 
+```java
+/*
+	TheCampLibrary.java
+	육군 더캠프
+*/
+import poly.dto.CookieDTO;
+import poly.dto.MessagesDTO;
+import poly.dto.SoldierDTO;
+import poly.dto.UserDTO;
+
+import poly.mail.TheCampLibrary;
+
+public static void main(String[] args){
+	//더캠프 로그인
+	UserDTO uDTO = new UserDTO();
+	String thecamp_id="더캠프 아이디"; //더캠프 아이디
+	uDTO.setThecamp_id(thecamp_id);
+	String thecamp_pw="더캠프 암호"; //더캠프 암호
+	uDTO.setThecamp_pw(thecamp_pw);
+	
+	//입대자 정보
+	SoldierDTO sDTO = new SoldierDTO();
+	String name="김땡땡"; //입대자 이름
+	sDTO.setName(name);
+	String birth="20010616"; //입대자 생년월일 8자리
+	sDTO.setBirth(birth);
+	String missSoldierClassCdNm="예비군인/훈련병"; //입대자 신분 (고정)
+	sDTO.setMissSoldierClassCdNm(missSoldierClassCdNm);
+	String grpCdNm="육군"; //군종 (고정)
+	sDTO.setGrpCdNm(grpCdNm);
+	String trainUnitCdNm="육군훈련소"; //입대 훈련소
+	sDTO.setTrainUnitCdNm(trainUnitCdNm);
+	String enterDate="20210913"; //입대일자 8자리
+	sDTO.setEnterDate(enterDate);
+	String missSoldierRelationship = "FRIEND"; //관계
+	sDTO.setMissSoldierRelationship(missSoldierRelationship);
+
+	//발송할 메시지
+	String title = "라이브러리 테스트"; //편지 제목
+	String content = "라이브러리 발송을 위한 테스트 중입니다. 이 내용을 폐기 하십시오. This is TheCamp Test."; //편지 내용
+	
+	MessageDTO mDTO = new MessageDTO();
+	mDTO.setTitle(title);
+	mDTO.setContent(content);
+
+	try {
+		String soldier_code = TheCampLibrary.getSoliderCode(uDTO, sDTO);
+		String msg = TheCampLibrary.sendMsg(uDTO, sDTO, soldier_code, mDTO);//메시지 발송
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+```
+
+</details>
+
+<details markdown="1">
+<summary>공군 기훈단 라이브러리</summary>
+
+```java
+/*
+	AirForceLibrary.java
+	공군 기훈단
+*/
+import poly.dto.MessagesDTO;
+import poly.dto.SoldierDTO;
+
+import poly.mail.AirForceLibrary;
+
+public static void main(String[] args){
+	//입대자 정보
+	SoldierDTO sDTO = new SoldierDTO();
+	sDTO.setName("김땡땡"); //이름
+	sDTO.setBirth("1999016"); //생년월일 8자리
+	sDTO.setEnterDate("20210405"); //입대일 8자리
+
+	MessageDTO mDTO = new MessageDTO();
+	mDTO.setTitle("더캠프 테스트"); //편지 제목
+	mDTO.setContent("더캠프 테스트 중입니다."); //편지 내용
+	mDTO.setRelation("친구"); //관계
+	mDTO.setPw("1234"); //편지 비밀번호 => 기훈단 홈페이지내 편지 조회 및 삭제
+	
+	String result = "";
+	try {
+		result = AirForceLibrary.sendMsg(sDTO, mDTO);
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+```
+
+</details>
  
 ## 팀 정보 (Team Information)
-- hong gil dong (hong999@gmail.com), Github Id: gildong999
-- kim su ji (suji999@gmail.com), Github Id: suji999
+- kim hyun ki (hkgo6040@naver.com), Github Id: Hyunki6040
+- kim seong min (98kimsungmin@naver.com), Github Id: tolelom
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osamhack2021/WEB_NextLetter_SeaSky/edit/master/readme.md)

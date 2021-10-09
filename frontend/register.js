@@ -1,16 +1,11 @@
 function div_army() {
-    divArmy = document.getElementById("army");
-    divArmy.style.display = "block";
+    document.getElementById("army").style.display = "block";
 
-    divAirforce = document.getElementById("airforce");
-    divAirforce.style.display = "none";
+    document.getElementById("airforce").style.display = "none";
 }
 
 function div_airforce() {
-    divArmy = document.getElementById("army");
-    divArmy.style.display = "none";
+    document.getElementById("army").style.display = "none";
 
-    divAirforce = document.getElementById("airforce");
-    divAirforce.style.display = "block";
-
+    document.getElementById("airforce").style.display = "block";
 }

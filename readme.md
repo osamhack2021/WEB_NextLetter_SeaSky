@@ -104,11 +104,11 @@ Using JAVA Module
 
 ## 프로젝트 사용법 (Getting Started)
 
-Work Flow 이미지 삽입예정 (하단 링크 참고)
+Work Flow 이미지 삽입예정 (하단 링크 참고)  
 https://app.code2flow.com/TpHSCSmcOkmR.png
 
 <details markdown="1">
-<summary>육군 더캠프 라이브러리</summary>
+<summary>육군 더캠프 라이브러리 (JAVA Code)</summary>
 
 ```java
 /*
@@ -167,7 +167,7 @@ public static void main(String[] args){
 </details>
 
 <details markdown="1">
-<summary>공군 기훈단 라이브러리</summary>
+<summary>공군 기훈단 라이브러리 (JAVA Code)</summary>
 
 ```java
 /*

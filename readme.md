@@ -103,6 +103,10 @@ Using JAVA Module
 3. 하단의 프로젝트 사용법 참고
 
 ## 프로젝트 사용법 (Getting Started)
+
+Work Flow 이미지 삽입예정 (하단 링크 참고)
+https://app.code2flow.com/TpHSCSmcOkmR.png
+
 <details markdown="1">
 <summary>육군 더캠프 라이브러리</summary>
 
@@ -208,8 +212,8 @@ public static void main(String[] args){
 
 This project is licensed under the terms of the MIT license.
 
-※ [라이선스 비교표(클릭)](https://olis.or.kr/license/compareGuide.do)
+<!--※ [라이선스 비교표(클릭)](https://olis.or.kr/license/compareGuide.do)
 
 ※ [Github 내 라이선스 키워드(클릭)](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
 
-※ [\[참조\] Github license의 종류와 나에게 맞는 라이선스 선택하기(클릭)](https://flyingsquirrel.medium.com/github-license%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%EB%82%98%EC%97%90%EA%B2%8C-%EB%A7%9E%EB%8A%94-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EC%84%A0%ED%83%9D%ED%95%98%EA%B8%B0-ae29925e8ff4)
+※ [\[참조\] Github license의 종류와 나에게 맞는 라이선스 선택하기(클릭)](https://flyingsquirrel.medium.com/github-license%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%EB%82%98%EC%97%90%EA%B2%8C-%EB%A7%9E%EB%8A%94-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EC%84%A0%ED%83%9D%ED%95%98%EA%B8%B0-ae29925e8ff4)-->

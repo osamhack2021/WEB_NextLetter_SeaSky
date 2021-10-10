@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Next Letter</title> 
+ 
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-color: lightcyan;
+        }
+        .container {
+            background: lightcyan;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 553px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 553px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 logo mt-2">
+                <a href="index.do">
+                    <img src="img/Next Letter-logo.png" style="width: 75%;">
+                </a>
+            </div>            
+            <div class="col-6 text-end mt-3">
+                <a class="btn btn-success" href="editprofile.do" style="width: 30%;">설정</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <img src="http://lorempixel.com/200/200" alt="..." class="img-thumbnail">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-2 text-center">
+                <h1><strong>홍길동</strong></h1>
+                <p class="text-justify">나 군대간다 인편 많이 써줘!!!</p>
+            </div>
+        </div>
+		<form action="" id="letterForm" method="POST">
+			<!-- 공통 -->
+			<input type="hidden" name="grpCdNm"> <!-- 육군 or 공군 -->
+			<input type="hidden" name="name">
+			<input type="hidden" name="birth">
+			<input type="hidden" name="enterDate">
+			
+			<!-- 육군 -->
+			<input type="hidden" name="thecampId" value="hkgo6040@naver.com" >
+			<input type="hidden" name="thecampPw" value="seasky1!" >
+		
+			<input type="hidden" name="trainUnitCdNm"> <!-- 입영 부대 -->
+			
+			<!-- 두가지 항목 추가해주세요 -->
+			제목 : <input type="text" name="title" value="더캠프 라이브러리 테스트"><br/>
+			발송자 명 : <input type="text" name="sender"><br/>
+			
+	        <div class="row m-2">
+	            <div class="col-12">
+	                <div class="input-group">
+		                	<input type="text" name="relation" placeholder="관계" class="form-control">
+		                    <input type="text" name="pw" placeholder="비밀번호" class="form-control">
+	                </div>
+	            </div>
+	            <div class="col-12">
+	                <textarea name="content" class="form-control" placeholder="편지를 입력하세요." rows="3" style="resize: none;" ></textarea>
+	
+	                <button class="btn btn-dark w-100" onclick="sendMessage();">발송</button>
+	            </div>
+	        </div>
+        </form>
+        <br>
+        <div class="row m-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="d-flex">
+                            여자친구
+                        </div>
+                        <div class="d-flex text-end">2021-01-01</div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">우리 찾아 만천하의 스며들어 같이 인생에 아름답고 그들의 힘있다.
+                            천고에 귀는 청춘 같이 우리 같은 것이다.보라, 열락의 철환하였는가? 미인을 것이 이것은 있으랴? 때까지 대한 피어나는 부패를 주며, 주는 없는 것이다.
+                            청춘 만물은 간에 노래하며 쓸쓸하랴? 것이다.보라, 불러 꽃이 청춘의 같은 말이다. 인간이 방황하여도, 설산에서 심장의 뿐이다. 인생을 생의 찬미를 불어 지혜는 칼이다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">여자친구</div>
+                    <div class="card-body">
+                        <p class="card-text">우리 찾아 만천하의 스며들어 같이 인생에 아름답고 그들의 힘있다.
+                            천고에 귀는 청춘 같이 우리 같은 것이다.보라, 열락의 철환하였는가? 미인을 것이 이것은 있으랴? 때까지 대한 피어나는 부패를 주며, 주는 없는 것이다.
+                            청춘 만물은 간에 노래하며 쓸쓸하랴? 것이다.보라, 불러 꽃이 청춘의 같은 말이다. 인간이 방황하여도, 설산에서 심장의 뿐이다. 인생을 생의 찬미를 불어 지혜는 칼이다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/message.js"></script>
+	
+	<script src="js/register.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

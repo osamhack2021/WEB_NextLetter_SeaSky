@@ -19,5 +19,7 @@ public class TestService implements ITestService {
 			return testMapper.함수명(parm명);
 		}
 	*/
-
+	public String testMethod() throws Exception {
+		return testMapper.testMethod();
+	}
 }

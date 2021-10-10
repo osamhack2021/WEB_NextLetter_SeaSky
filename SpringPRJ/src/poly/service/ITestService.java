@@ -1,6 +1,6 @@
 package poly.service;
 
 public interface ITestService {
-	//public retunÇü ÇÔ¼ö¸í(parmÇü parm¸í) throws Exception;
-
+	//public retunï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½(parmï¿½ï¿½ parmï¿½ï¿½) throws Exception;
+	public String testMethod() throws Exception;
 }

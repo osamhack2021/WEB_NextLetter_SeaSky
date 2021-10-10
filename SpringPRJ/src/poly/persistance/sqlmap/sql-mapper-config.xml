@@ -3,6 +3,9 @@
 <configuration>
     <typeAliases>
     	<!-- 사용할 DTO 등록  -->
-	<typeAlias type="poly.dto.TestDTO" alias="TestDTO"/>
+	<typeAlias type="poly.dto.CookieDTO" alias="CookieDTO"/>
+	<typeAlias type="poly.dto.MessageDTO" alias="MessageDTO"/>
+	<typeAlias type="poly.dto.SoldierDTO" alias="SoldierDTO"/>
+	<typeAlias type="poly.dto.UserDTO" alias="UserDTO"/>
     </typeAliases>
 </configuration>

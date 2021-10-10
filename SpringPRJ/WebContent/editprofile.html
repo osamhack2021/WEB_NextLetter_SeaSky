@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Next Letter</title> 
+ 
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-color: lightcyan;
+        }
+        .container {
+            background: lightcyan;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 553px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 553px;
+            }
+        }
+    </style>
+    
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-6 logo">
+                <a href="index.do">
+                    <img src="img/Next Letter-logo.png" style="width: 50%">
+                </a>
+            </div>            
+            <div class="col-6 text-end mt-2">
+                <a class="btn btn-light" href="index.do">로그아웃</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="http://lorempixel.com/200/200" alt="..." class="img-thumbnail">
+            </div>
+            <div class="col-12 text-center">
+                프로필 사진:
+                <input type="file" name="file" id="imageFileOpenInput" accept="image/*">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-2 text-center">
+                <h1><strong>홍길동</strong></h1>
+                <p class="text-justify">나 군대간다 인편 많이 써줘!!!</p>
+            </div>
+        </div>
+
+		<hr>
+			<h5>이곳에 들어갈 리스트입니다. input의 name명만 일치 시켜 주세요.</h5>
+			<!-- 공통 -->
+			grpCdNm<input type="text" name="grpCdNm"><br/> <!-- 육군 or 공군 -->
+			name<input type="text" name="name"><br/>
+			birth<input type="text" name="birth"><br/> <!-- 생일 8자리 -->
+			enterDate<input type="text" name="enterDate"><br/> <!-- 입영일 8자리 -->
+			
+			<!-- 육군 -->
+			thecampId<input type="text" name="thecampId" value="hkgo6040@naver.com" ><br/>
+			thecampPw<input type="text" name="thecampPw" value="seasky1!" ><br/>
+		
+			trainUnitCdNm<input type="text" name="trainUnitCdNm"><br/> <!-- 입영 부대 -->
+		<hr>
+		
+        <button class="btn btn-dark" onclick="saveInfo('grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm')">(육군일 경우)수정하기</button><br/>
+        <button class="btn btn-dark" onclick="saveInfo('grpCdNm,name,birth,enterDate')">(공군일 경우)수정하기</button>
+    </div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/editprofile.js"></script>
+	
+	<script>
+	    $(document).ready(function(){
+	    	setInfo('grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm');
+	    });
+    </script>
+	
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

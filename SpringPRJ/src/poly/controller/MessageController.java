@@ -6,6 +6,7 @@ import javax.servlet.ServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import poly.dto.MessageDTO;
 import poly.dto.SoldierDTO;
@@ -22,13 +23,13 @@ public class MessageController {
 	@Resource(name = "MessageService")
 	private IMessageService messageService;
 
-	@RequestMapping(value = "/sendThecamp")
+	@RequestMapping(value = "/sendThecamp", method=RequestMethod.POST)
 	public String sendThecamp(ServletRequest request ,Model model) throws Exception {
 		//더캠프 로그인 정보
     	UserDTO uDTO = new UserDTO();
-        String thecamp_id = CmmUtil.nvl((String) request.getParameter("id"));
+        String thecamp_id = CmmUtil.nvl((String) request.getParameter("thecampId"));
         uDTO.setThecamp_id(thecamp_id);
-        String thecamp_pw = CmmUtil.nvl((String) request.getParameter("pw"));
+        String thecamp_pw = CmmUtil.nvl((String) request.getParameter("thecampPw"));
         uDTO.setThecamp_pw(thecamp_pw);
 
       //입대자 정보
@@ -37,7 +38,7 @@ public class MessageController {
         sDTO.setName(name);
         String birth = CmmUtil.nvl((String) request.getParameter("birth"));
         sDTO.setBirth(birth);
-        String missSoldierClassCdNm = CmmUtil.nvl((String) request.getParameter("missSoldierClassCdNm"));
+        String missSoldierClassCdNm = "예비군인/훈련병";
         sDTO.setMissSoldierClassCdNm(missSoldierClassCdNm);
         String grpCdNm = CmmUtil.nvl((String) request.getParameter("grpCdNm"));
         sDTO.setGrpCdNm(grpCdNm);
@@ -45,7 +46,7 @@ public class MessageController {
         sDTO.setTrainUnitCdNm(trainUnitCdNm);
         String enterDate = CmmUtil.nvl((String) request.getParameter("enterDate"));
         sDTO.setEnterDate(enterDate);
-        String missSoldierRelationship = CmmUtil.nvl((String) request.getParameter("missSoldierRelationship"));
+        String missSoldierRelationship = "FRIEND";
         sDTO.setMissSoldierRelationship(missSoldierRelationship);
 
         
@@ -87,7 +88,7 @@ public class MessageController {
 		return "/alert";
 	}
 	
-	@RequestMapping(value = "/sendAirforce")
+	@RequestMapping(value = "/sendAirforce", method=RequestMethod.POST)
 	public String sendAirforce(ServletRequest request ,Model model) throws Exception {
 		//입대자 정보
 		SoldierDTO sDTO = new SoldierDTO();

@@ -33,6 +33,7 @@ function chekNull(name){
 		alert('설정되지 않은 정보가 있습니다!');
 		return false;
 	}else{
+		
 		document.getElementsByName(name)[0].value = value;
 	}
 }

@@ -8,10 +8,10 @@
 </head>
 <body>
 	<h4>[육군]더캠프 라이브러리</h4>
-	<form action="/message/sendThecamp.do">
+	<form action="/message/sendThecamp.do" method="POST">
 		<h5>더캠프 아이디</h5>
-		아이디 : <input type="text" name="id" value="hkgo6040@naver.com" readonly><br/>
-		비밀번호 : <input type="text" name="pw" value="seasky1!" readonly><br/>
+		아이디 : <input type="text" name="thecampId" value="hkgo6040@naver.com" readonly><br/>
+		비밀번호 : <input type="text" name="thecampPw" value="seasky1!" readonly><br/>
 		
 		<h5>입대자 정보(Soldier)</h5>
 		성분(default) : <input type="text" name="missSoldierClassCdNm" value="예비군인/훈련병" readonly><br/>
@@ -61,7 +61,7 @@
 	</p>
 	<hr/>
 	<h4>[공군]</h4>
-	<form action="/message/sendAirforce.do">
+	<form action="/message/sendAirforce.do" method="POST">
 		<h5>입대자 정보(Soldier)</h5>
 		이름 : <input type="text" name="name"><br/>
 		생년월일(8자리) : <input type="text" name="birth"><br/>

@@ -1,6 +1,7 @@
 
 
 
+
 # 프로젝트 명
 <!--![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)-->
 <h1 align="center">💌 넥스트 레터</h1>
@@ -104,8 +105,16 @@ Using JAVA Module
 
 ## 프로젝트 사용법 (Getting Started)
 
-Work Flow 이미지 삽입예정 (하단 링크 참고)  
-https://app.code2flow.com/TpHSCSmcOkmR.png
+Work Flow  
+
+- 입대전
+<p align="center"><img src="./workflow/1.png" width="76%"></p>
+
+- 입대 후 인터넷 편지 발송
+<p align="center"><img src="./workflow/2.png" width="75%"></p>
+
+- 수료 후 인터넷 편지 재조회
+<p align="center"><img src="./workflow/3.png" width="60%"></p>
 
 <details markdown="1">
 <summary>육군 더캠프 라이브러리 (JAVA Code)</summary>

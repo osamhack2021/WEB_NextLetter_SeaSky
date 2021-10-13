@@ -103,8 +103,30 @@ Using JAVA Module
 3. 하단의 프로젝트 사용법 참고
 
 ## 프로젝트 사용법 (Getting Started)
+<<<<<<< HEAD
+=======
 <details markdown="1">
 <summary>육군 더캠프 라이브러리</summary>
+>>>>>>> refs/remotes/origin/hyngi
+
+<<<<<<< HEAD
+Work Flow 이미지 삽입예정 (하단 링크 참고)  
+https://app.code2flow.com/TpHSCSmcOkmR.png
+=======
+```java
+/*
+	TheCampLibrary.java
+	육군 더캠프
+*/
+import poly.dto.CookieDTO;
+import poly.dto.MessagesDTO;
+import poly.dto.SoldierDTO;
+import poly.dto.UserDTO;
+>>>>>>> refs/remotes/origin/hyngi
+
+<<<<<<< HEAD
+<details markdown="1">
+<summary>육군 더캠프 라이브러리 (JAVA Code)</summary>
 
 ```java
 /*
@@ -163,7 +185,57 @@ public static void main(String[] args){
 </details>
 
 <details markdown="1">
+<summary>공군 기훈단 라이브러리 (JAVA Code)</summary>
+=======
+import poly.mail.TheCampLibrary;
+
+public static void main(String[] args){
+	//더캠프 로그인
+	UserDTO uDTO = new UserDTO();
+	String thecamp_id="더캠프 아이디"; //더캠프 아이디
+	uDTO.setThecamp_id(thecamp_id);
+	String thecamp_pw="더캠프 암호"; //더캠프 암호
+	uDTO.setThecamp_pw(thecamp_pw);
+	
+	//입대자 정보
+	SoldierDTO sDTO = new SoldierDTO();
+	String name="김땡땡"; //입대자 이름
+	sDTO.setName(name);
+	String birth="20010616"; //입대자 생년월일 8자리
+	sDTO.setBirth(birth);
+	String missSoldierClassCdNm="예비군인/훈련병"; //입대자 신분 (고정)
+	sDTO.setMissSoldierClassCdNm(missSoldierClassCdNm);
+	String grpCdNm="육군"; //군종 (고정)
+	sDTO.setGrpCdNm(grpCdNm);
+	String trainUnitCdNm="육군훈련소"; //입대 훈련소
+	sDTO.setTrainUnitCdNm(trainUnitCdNm);
+	String enterDate="20210913"; //입대일자 8자리
+	sDTO.setEnterDate(enterDate);
+	String missSoldierRelationship = "FRIEND"; //관계
+	sDTO.setMissSoldierRelationship(missSoldierRelationship);
+
+	//발송할 메시지
+	String title = "라이브러리 테스트"; //편지 제목
+	String content = "라이브러리 발송을 위한 테스트 중입니다. 이 내용을 폐기 하십시오. This is TheCamp Test."; //편지 내용
+	
+	MessageDTO mDTO = new MessageDTO();
+	mDTO.setTitle(title);
+	mDTO.setContent(content);
+
+	try {
+		String soldier_code = TheCampLibrary.getSoliderCode(uDTO, sDTO);
+		String msg = TheCampLibrary.sendMsg(uDTO, sDTO, soldier_code, mDTO);//메시지 발송
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+```
+
+</details>
+
+<details markdown="1">
 <summary>공군 기훈단 라이브러리</summary>
+>>>>>>> refs/remotes/origin/hyngi
 
 ```java
 /*
@@ -208,8 +280,8 @@ public static void main(String[] args){
 
 This project is licensed under the terms of the MIT license.
 
-※ [라이선스 비교표(클릭)](https://olis.or.kr/license/compareGuide.do)
+<!--※ [라이선스 비교표(클릭)](https://olis.or.kr/license/compareGuide.do)
 
 ※ [Github 내 라이선스 키워드(클릭)](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
 
-※ [\[참조\] Github license의 종류와 나에게 맞는 라이선스 선택하기(클릭)](https://flyingsquirrel.medium.com/github-license%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%EB%82%98%EC%97%90%EA%B2%8C-%EB%A7%9E%EB%8A%94-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EC%84%A0%ED%83%9D%ED%95%98%EA%B8%B0-ae29925e8ff4)
+※ [\[참조\] Github license의 종류와 나에게 맞는 라이선스 선택하기(클릭)](https://flyingsquirrel.medium.com/github-license%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80-%EB%82%98%EC%97%90%EA%B2%8C-%EB%A7%9E%EB%8A%94-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EC%84%A0%ED%83%9D%ED%95%98%EA%B8%B0-ae29925e8ff4)-->

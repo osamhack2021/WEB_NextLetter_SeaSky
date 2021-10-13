@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Next Letter</title> 
+ 
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-color: lightcyan;
+        }
+        .container {
+            background: lightcyan;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 553px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 553px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-6 logo">
+                <a href="index.html">
+                    <img src="Next Letter-logo.png" style="width: 50%">
+                </a>
+            </div>            
+            <div class="col-6 text-end mt-2">
+                <a class="btn btn-light" href="index.html">로그아웃</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="http://lorempixel.com/200/200" alt="..." class="img-thumbnail">
+            </div>
+            <div class="col-12 text-center">
+                프로필 사진:
+                <input type="file" name="file" id="imageFileOpenInput" accept="image/*">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-2 text-center">
+                <h1><strong>홍길동</strong></h1>
+                <p class="text-justify">나 군대간다 인편 많이 써줘!!!</p>
+            </div>
+        </div>
+
+        <button class="btn btn-dark" type="submit">수정하기</button>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

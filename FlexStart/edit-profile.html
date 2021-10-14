@@ -80,17 +80,45 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
     <div class="col-12 text-center">
-        <div class="col-12 text-center mb-3">
-          <input type="file" name="profileimage" style="display: none;">
-          <img src="http://lorempixel.com/200/200" alt="profile-image" class="img-thumbnail" onclick="document.all.profileimage.click();">
+      <div class="row">
+        <div class="col-6">
+          <div class="col-12 text-center mb-3">
+            <input type="file" name="profileimage" style="display: none;">
+            <img src="http://lorempixel.com/200/200" alt="profile-image" class="img-thumbnail" onclick="document.all.profileimage.click();">
+          </div>
+          <h1><strong>홍길동</strong></h1>
+          <textarea placeholder="나 군대간다 인편 많이 써줘!!!"></textarea>
+          <br>
         </div>
-        <h1><strong>홍길동</strong></h1>
-        <textarea placeholder="나 군대간다 인편 많이 써줘!!!"></textarea>
-        <br>
-        <button class="btn btn-dark" type="submit">저장</button>
-
-        <h3 class="m-5">세부정보 수정</h3>
-        <input type="text">
+        <div class="col-6">
+          <h3 class="">세부정보</h3>
+          <label for="id">아이디</label>
+          <input type="text" id="id" placeholder="기본 아이디(수정불가)" disabled>
+          <br>
+          <label for="pw">비밀번호</label>
+          <input type="password" id="pw" placeholder="비밀번호">
+          <br>
+          <label for="pw2">비밀번호 재입력</label>
+          <input type="password" id="pw2" placeholder="비밀번호 재확인">
+          <br>
+          <label for="class">군 분류</label>
+          <input type="text" id="class" placeholder="육군" disabled>
+          <br>
+  
+          <!-- 육군 -->
+          <div class="army">
+            <label for="thecampId">더 캠프 아이디</label>
+            <input type="text" id="thecampId" placeholder="abscdfw">
+            <br>
+            <label for="thecampPw">더 캠프 비밀번호</label>
+            <input type="password" id="thecampPw">
+          </div>
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-lg btn-primary" type="button" style="background-color:#4154f1;">저장</button>
+        </div>
+      </div>
+      
     </div>
 
 

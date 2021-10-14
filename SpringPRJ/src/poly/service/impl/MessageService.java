@@ -19,7 +19,7 @@ public class MessageService implements IMessageService {
 	private MessageMapper messageMapper;
 	
 	@Override
-	public MessageDTO insertMessage(MessageDTO mDTO) throws Exception{
+	public int insertMessage(MessageDTO mDTO) throws Exception{
 		return messageMapper.insertMessage(mDTO);
 	}
 	

@@ -40,15 +40,18 @@ public class TestController {
 	
 	@RequestMapping(value = "/test/MessageList")
 	public String MessageList(ServletRequest request, Model model) throws Exception {
-		String user_no = CmmUtil.nvl((String) request.getParameter("user_no"));
+		//String user_no = CmmUtil.nvl((String) request.getParameter("user_no"));
+		String user_no = "1";
 		List<MessageDTO> mList = null;
 		try {
 			mList = messageService.getMessage(user_no);
 		}catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 		
-		
+		System.out.println(mList);
+		System.out.println(mList.get(0).getContent());
 		model.addAttribute("messageList", mList);
 		return "/test/MessageList";
 	}

@@ -72,6 +72,7 @@ public class MessageController {
 					messageService.insertMessage(mDTO);
 				}catch (Exception e) {
 					// TODO: handle exception
+					e.printStackTrace();
 				}
 				
 			}else {

@@ -10,6 +10,6 @@ import poly.dto.MessageDTO;
 
 @Mapper("MessageMapper")
 public interface MessageMapper {
-	public MessageDTO insertMessage(MessageDTO mDTO) throws Exception;
+	public int insertMessage(MessageDTO mDTO) throws Exception;
 	public List<MessageDTO> getMessage(String user_no) throws Exception;
 }

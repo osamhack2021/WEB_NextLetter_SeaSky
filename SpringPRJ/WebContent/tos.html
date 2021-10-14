@@ -17,10 +17,10 @@
             height: 100%;
         }
         body {
-            background-color: lightcyan;
+            background-color: ivory;
         }
         .container {
-            background: lightcyan;
+            background: ivory;
         }
 
         @media (min-width: 768px) {
@@ -33,6 +33,21 @@
             .container {
                 width: 553px;
             }
+        }
+        .type1::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .type1::-webkit-scrollbar-track {
+            background: #eeeeee;
+            border-radius: 5px; 
+        }
+        .type1::-webkit-scrollbar-track {
+            display: none;
+        }   
+        .type1::-webkit-scrollbar-thumb {
+            background: linear-gradient(#c2e59c, #64b3f4);
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -50,9 +65,9 @@
                 </div>
             </div>
 
-            <div class="col text-center">
-                <h1>회원 가입 약관</h1>
-                <div class="border" style="overflow: scroll; height: 30%;">
+            <div class="col-12 text-center">
+                <h3 class="mt-2">회원 약관</h3>
+                <div class="type1 mx-auto" style="overflow: scroll; height: 30%; width: 90%;">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus sagittis odio, nec efficitur mauris vestibulum eget. Proin est ante, scelerisque ac libero ut, sollicitudin fringilla sem. Sed iaculis vitae erat ut ultrices. Mauris sed eros mattis odio varius iaculis. Pellentesque maximus volutpat lacus ac sodales. Aliquam elit felis, porta a imperdiet eget, convallis sit amet ipsum. Etiam vulputate tempor maximus. Integer velit felis, convallis non lacus ut, consequat pretium enim. Integer quis est ac sem molestie rutrum nec quis est. Aenean vehicula lectus sit amet dictum malesuada. Vestibulum eget lacinia justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris at imperdiet ligula. Integer non velit pretium, auctor ex eget, posuere eros.
 
                         Aenean consectetur luctus magna at dictum. Aliquam luctus ligula nunc, non rutrum lorem elementum in. Vestibulum posuere condimentum augue, ut dapibus nunc vulputate vitae. Mauris tortor metus, malesuada sed felis in, dapibus gravida risus. Proin lorem dolor, dictum vel nibh non, maximus finibus ipsum. Nullam suscipit viverra felis, in faucibus nisl bibendum eu. Aliquam non sapien dui. Cras laoreet nisl vitae massa pulvinar dignissim placerat in justo. Morbi nec lacinia nunc.
@@ -64,7 +79,8 @@
                         Mauris at sapien magna. Vivamus sed dapibus tortor. Vivamus ullamcorper, massa ac suscipit accumsan, quam dolor finibus orci, sed dapibus nulla ex id mauris. Suspendisse eleifend luctus ultrices. Suspendisse ac ante dapibus, malesuada nulla id, tristique mauris. Praesent facilisis, magna eget pulvinar lacinia, dui massa rutrum eros, non laoreet erat urna eget elit. Aenean ornare sed magna non fermentum. Mauris tincidunt metus in rhoncus varius. In tortor est, fringilla eget mi pharetra, finibus fermentum sapien.
                     </p>
                 </div>
-                <input class="" type="radio" onclick="radioBtn()"> 약관에 동의합니다.
+                <input class="" id="check" type="radio" value="N" onclick="radioBtn()">
+                <label for="check">약관에 동의합니다.</label> 
                 <button class="btn btn-dark m-2" id="registerBtn" onclick="location.href='register.do'" disabled>다음</button> 
             </div>
         </div>

@@ -9,7 +9,7 @@
         class="org.springframework.jdbc.datasource.DriverManagerDataSource"
         lazy-init="false" >
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://20.194.39.15:3306/nextLetter?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul&amp;autoReconnection=true" />
+        <property name="url" value="jdbc:mysql://localhost:5003/nextLetter?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Seoul&amp;autoReconnection=true" />
         <property name="username" value="root" />
         <property name="password" value="seasky1!" />
     </bean>

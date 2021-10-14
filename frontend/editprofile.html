@@ -51,7 +51,9 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <img src="http://lorempixel.com/200/200" alt="..." class="img-thumbnail">
+                <input type="file" name="file1" style="display: none;">
+                <input type="text" name="file2" id="file2">
+                <img src="http://lorempixel.com/200/200" alt="profile-image" class="img-thumbnail" onclick="document.all.file1.click(); document.all.file2.value=document.all.file1.value;">
             </div>
             <div class="col-12 text-center">
                 프로필 사진:

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Next Letter</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.7.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="profile.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span>Next Letter</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <!--
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          -->
+          <li><a class="nav-link scrollto" href="login.html">로그인</a></li>
+          <li><a class="nav-link scrollto" href="register.html">회원가입</a></li>
+          <!-- 
+            <li><a class="getstarted scrollto" href="login.html">로그인</a></li>
+          -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="col-12 text-center">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="col-12 text-center mb-3">
+            <input type="file" name="profileimage" style="display: none;">
+            <img src="http://lorempixel.com/200/200" alt="profile-image" class="img-thumbnail" onclick="document.all.profileimage.click();">
+          </div>
+          <h1><strong id="text_name">홍길동</strong></h1>
+          <textarea name="statusMsg" placeholder="나 군대간다 인편 많이 써줘!!!"></textarea>
+          <br>
+        </div>
+        <div class="col-lg-6">
+        
+	        <div class="col-9 form-group mx-auto">
+	        <h3 class="">세부정보</h3>
+	        <input type="text" name="name" id="name" class="form-control my-3" placeholder="이름">
+	        <input type="text" name="id" id="id" class="form-control my-3" placeholder="아이디" readonly>
+	        <input type="password" name="pw" class="form-control my-3" id="pw" placeholder="비밀번호">
+	        <input type="password" class="form-control my-3" placeholder="비밀번호 재입력">
+	        <input type="number" name="birth" id="birth" class="form-control my-3" placeholder="생년월일(8자리)">
+	        <input type="number" name="enterDate" id="enlistment date" class="form-control my-3" placeholder="입영일(ex.210925)">
+	        <p class="col-2">군종</p>
+	        <div class="row m-3">
+		        <div class="col-lg-4">
+		            <div class="form-check form-check-inline">
+		                <input class="form-check-input" type="radio" name="grpCdNm" id="army_radio" value="army" onclick="div_army()">
+		                <label class="form-check-label" for="inlineRadio1">육군</label>
+		            </div>
+		        </div>
+		        <div class="col-lg-4">
+		            <div class="form-check form-check-inline">
+		                <input class="form-check-input" type="radio" name="grpCdNm" value="navy" disabled>
+		                <label class="form-check-label" for="inlineRadio2">해군</label>
+		            </div>
+		        </div>
+		        <div class="col-lg-4">
+		            <div class="form-check form-check-inline">
+		                <input class="form-check-input" type="radio" name="grpCdNm" id="airforce_radio" value="airforce" onclick="div_airforce()">
+		                <label class="form-check-label" for="inlineRadio3">공군</label>
+		            </div>
+		        </div>
+	        </div>
+	        <!-- 육군 -->
+	        <div id="army" style="display: none;">
+	        	<p class="col-4">더캠프아이디</p>
+	        	<input type="text" class="form-control my-2" name="thecampId" id="thecampId" placeholder="더 캠프 아이디">
+	        	<input type="password" class="form-control my-2" name="thecampPw" id="thecampPw" placeholder="더 캠프 비밀번호">
+	        	
+	        	<p class="col-4">입영부대</p>
+	            <select class="form-control my-2" name="trainUnitCdNm" id="trainUnitCdNm">
+	                <option value="1사단">1사단</option><option value="2사단">2사단</option><option value="3사단">3사단</option><option value="5사단">5사단</option><option value="6사단">6사단</option><option value="7사단">7사단</option><option value="9사단">9사단</option><option value="11사단">11사단</option><option value="12사단">12사단</option><option value="15사단">15사단</option><option value="17사단">17사단</option><option value="20사단">20사단</option><option value="21사단">21사단</option><option value="22사단">22사단</option><option value="23사단">23사단</option><option value="25사단">25사단</option><option value="27사단">27사단</option><option value="28사단">28사단</option><option value="30사단">30사단</option><option value="31사단">31사단</option><option value="32사단">32사단</option><option value="35사단">35사단</option><option value="36사단">36사단</option><option value="37사단">37사단</option><option value="39사단">39사단</option><option value="50사단">50사단</option><option value="51사단">51사단</option><option value="53사단">53사단</option><option value="육군훈련소">육군훈련소</option><option value="육군훈련소(23연대)">육군훈련소(23연대)</option><option value="육군훈련소(25연대)">육군훈련소(25연대)</option><option value="육군훈련소(26연대)">육군훈련소(26연대)</option><option value="육군훈련소(27연대)">육군훈련소(27연대)</option><option value="육군훈련소(28연대)">육군훈련소(28연대)</option><option value="육군훈련소(29연대)">육군훈련소(29연대)</option><option value="육군훈련소(30연대)">육군훈련소(30연대)</option>
+	            </select>
+	            <br/>      
+	        </div>
+	        
+	        <!-- 공군 -->
+	        <div id="airforce" style="display: none;">
+	
+	        </div>
+	      </div>
+      
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-lg btn-primary" id="Submit" type="button" style="background-color:#4154f1;" onclick="alert('군종을 선택해주세요!')">저장</button>
+          <button class="btn btn-lg btn-primary" id="armySubmit" type="button" style="background-color:#4154f1;display:none;" onclick="saveInfo('id,pw,statusMsg,grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm')">저장</button>
+          <button class="btn btn-lg btn-primary" id="airforceSubmit"type="button" style="background-color:#4154f1;display:none;" onclick="saveInfo('id,pw,statusMsg,grpCdNm,name,birth,enterDate')">저장</button>
+        </div>
+      </div>
+      
+    </div>
+
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/editprofile.js"></script>
+  <script src="js/register.js"></script>
+   
+  <script>
+	    $(document).ready(function(){
+	    	setInfo('id,pw,statusMsg,grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm');
+	    	
+	    	var name = sessionStorage.getItem('name');
+	    	if(typeof name != 'undefined' && name != null && name != ''){
+	    		document.getElementById('text_name').innerText = name;
+	    	}
+	    });
+   </script>
+</body>
+
+</html>

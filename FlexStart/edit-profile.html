@@ -48,9 +48,31 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="profile.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="login.html">시작하기</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <!--
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          -->
+          <li><a class="nav-link scrollto" href="login.html">로그인</a></li>
+          <li><a class="nav-link scrollto" href="register.html">회원가입</a></li>
+          <!-- 
+            <li><a class="getstarted scrollto" href="login.html">로그인</a></li>
+          -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -63,6 +85,10 @@
     <div class="col-12 text-center">
       <div class="row">
         <div class="col-lg-6">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-12 col-md-4 mx-auto">
           <div class="col-12 text-center mb-3">
             <input type="file" name="profileimage" style="display: none;">
             <img src="http://lorempixel.com/200/200" alt="profile-image" class="img-thumbnail" onclick="document.all.profileimage.click();">
@@ -70,6 +96,14 @@
           <h1><strong id="text_name">홍길동</strong></h1>
           <textarea name="statusMsg" placeholder="나 군대간다 인편 많이 써줘!!!"></textarea>
           <br>
+          <div class="my-3">
+            <h1><strong>홍길동</strong></h1>
+          </div>
+
+          <div class="form-group">
+            <textarea class="my-2" class="form-control" rows="3" placeholder="나 군대간다 인편 많이 써줘!!!"></textarea>
+          </div>
+
         </div>
         <div class="col-lg-6">
         
@@ -121,6 +155,341 @@
 	        </div>
 	      </div>
       
+        <div class="col-12 col-md-4 form-group mx-auto">
+          <h3 class="">세부정보</h3>
+          <div class="form-group row my-2">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="id" class="col-sm-4 col-form-label">아이디</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control" id="id" placeholder="기본 아이디(수정불가)">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw" class="col-sm-4 col-form-label">비밀번호</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="pw" placeholder="비밀번호">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw2" class="col-sm-4 col-form-label">비밀번호 재확인</label>
+            <div class="col-sm-8">
+              <input type="password" id="pw2" class="form-control" placeholder="비밀번호 재확인">
+            </div>
+          </div>
+
+          <div class="form-group row my-2" >
+            <label for="birth" class="col-sm-4 col-form-label">생년월일</label>
+            <div class="col-sm-8">
+              <input type="date" id="birth" class="form-control" placeholder="생년월일">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="enlistmentDate" class="col-sm-4 col-form-label">입영일</label>
+            <div class="col-sm-8">
+              <input type="date" id="enlistmentDate" class="form-control" placeholder="입영일"> 
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="class" class="col-sm-4 col-form-label">군 분류</label>
+            <div class="col-sm-8">
+              <input type="text" id="class" class="form-control" placeholder="육군" disabled>
+            </div>
+          </div>
+  
+          <!-- 육군 -->
+          <div class="army">
+            <div class="form-group row my-2">
+              <label for="thecampId" class="col-sm-4 col-form-label">더 캠프 아이디</label>
+              <div class="col-sm-8">
+                <input type="text" id="thecampId" class="form-control" placeholder="더 캠프 아이디">
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+              <label for="thecampPw" class="col-sm-4 col-form-label">더 캠프 비밀번호</label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control" id="thecampPw">
+              </div>
+            </div>
+          </div>
+        <div class="col-12 col-md-4 form-group mx-auto">
+          <h3 class="">세부정보</h3>
+          <div class="form-group row my-2">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="id" class="col-sm-4 col-form-label">아이디</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control" id="id" placeholder="기본 아이디(수정불가)">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw" class="col-sm-4 col-form-label">비밀번호</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="pw" placeholder="비밀번호">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw2" class="col-sm-4 col-form-label">비밀번호 재확인</label>
+            <div class="col-sm-8">
+              <input type="password" id="pw2" class="form-control" placeholder="비밀번호 재확인">
+            </div>
+          </div>
+
+          <div class="form-group row my-2" >
+            <label for="birth" class="col-sm-4 col-form-label">생년월일</label>
+            <div class="col-sm-8">
+              <input type="date" id="birth" class="form-control" placeholder="생년월일">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="enlistmentDate" class="col-sm-4 col-form-label">입영일</label>
+            <div class="col-sm-8">
+              <input type="date" id="enlistmentDate" class="form-control" placeholder="입영일"> 
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="class" class="col-sm-4 col-form-label">군 분류</label>
+            <div class="col-sm-8">
+              <input type="text" id="class" class="form-control" placeholder="육군" disabled>
+            </div>
+          </div>
+  
+          <!-- 육군 -->
+          <div class="army">
+            <div class="form-group row my-2">
+              <label for="thecampId" class="col-sm-4 col-form-label">더 캠프 아이디</label>
+              <div class="col-sm-8">
+                <input type="text" id="thecampId" class="form-control" placeholder="더 캠프 아이디">
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+              <label for="thecampPw" class="col-sm-4 col-form-label">더 캠프 비밀번호</label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control" id="thecampPw">
+              </div>
+            </div>
+          </div>
+        <div class="col-12 col-md-4 form-group mx-auto">
+          <h3 class="">세부정보</h3>
+          <div class="form-group row my-2">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="id" class="col-sm-4 col-form-label">아이디</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control" id="id" placeholder="기본 아이디(수정불가)">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw" class="col-sm-4 col-form-label">비밀번호</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="pw" placeholder="비밀번호">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw2" class="col-sm-4 col-form-label">비밀번호 재확인</label>
+            <div class="col-sm-8">
+              <input type="password" id="pw2" class="form-control" placeholder="비밀번호 재확인">
+            </div>
+          </div>
+
+          <div class="form-group row my-2" >
+            <label for="birth" class="col-sm-4 col-form-label">생년월일</label>
+            <div class="col-sm-8">
+              <input type="date" id="birth" class="form-control" placeholder="생년월일">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="enlistmentDate" class="col-sm-4 col-form-label">입영일</label>
+            <div class="col-sm-8">
+              <input type="date" id="enlistmentDate" class="form-control" placeholder="입영일"> 
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="class" class="col-sm-4 col-form-label">군 분류</label>
+            <div class="col-sm-8">
+              <input type="text" id="class" class="form-control" placeholder="육군" disabled>
+            </div>
+          </div>
+  
+          <!-- 육군 -->
+          <div class="army">
+            <div class="form-group row my-2">
+              <label for="thecampId" class="col-sm-4 col-form-label">더 캠프 아이디</label>
+              <div class="col-sm-8">
+                <input type="text" id="thecampId" class="form-control" placeholder="더 캠프 아이디">
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+              <label for="thecampPw" class="col-sm-4 col-form-label">더 캠프 비밀번호</label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control" id="thecampPw">
+              </div>
+            </div>
+          </div>
+        <div class="col-12 col-md-4 form-group mx-auto">
+          <h3 class="">세부정보</h3>
+          <div class="form-group row my-2">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="id" class="col-sm-4 col-form-label">아이디</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control" id="id" placeholder="기본 아이디(수정불가)">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw" class="col-sm-4 col-form-label">비밀번호</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="pw" placeholder="비밀번호">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw2" class="col-sm-4 col-form-label">비밀번호 재확인</label>
+            <div class="col-sm-8">
+              <input type="password" id="pw2" class="form-control" placeholder="비밀번호 재확인">
+            </div>
+          </div>
+
+          <div class="form-group row my-2" >
+            <label for="birth" class="col-sm-4 col-form-label">생년월일</label>
+            <div class="col-sm-8">
+              <input type="date" id="birth" class="form-control" placeholder="생년월일">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="enlistmentDate" class="col-sm-4 col-form-label">입영일</label>
+            <div class="col-sm-8">
+              <input type="date" id="enlistmentDate" class="form-control" placeholder="입영일"> 
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="class" class="col-sm-4 col-form-label">군 분류</label>
+            <div class="col-sm-8">
+              <input type="text" id="class" class="form-control" placeholder="육군" disabled>
+            </div>
+          </div>
+  
+          <!-- 육군 -->
+          <div class="army">
+            <div class="form-group row my-2">
+              <label for="thecampId" class="col-sm-4 col-form-label">더 캠프 아이디</label>
+              <div class="col-sm-8">
+                <input type="text" id="thecampId" class="form-control" placeholder="더 캠프 아이디">
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+              <label for="thecampPw" class="col-sm-4 col-form-label">더 캠프 비밀번호</label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control" id="thecampPw">
+              </div>
+            </div>
+          </div>
+        <div class="col-12 col-md-4 form-group mx-auto">
+          <h3 class="">세부정보</h3>
+          <div class="form-group row my-2">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="id" class="col-sm-4 col-form-label">아이디</label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control" id="id" placeholder="기본 아이디(수정불가)">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw" class="col-sm-4 col-form-label">비밀번호</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="pw" placeholder="비밀번호">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw2" class="col-sm-4 col-form-label">비밀번호 재확인</label>
+            <div class="col-sm-8">
+              <input type="password" id="pw2" class="form-control" placeholder="비밀번호 재확인">
+            </div>
+          </div>
+
+          <div class="form-group row my-2" >
+            <label for="birth" class="col-sm-4 col-form-label">생년월일</label>
+            <div class="col-sm-8">
+              <input type="date" id="birth" class="form-control" placeholder="생년월일">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="enlistmentDate" class="col-sm-4 col-form-label">입영일</label>
+            <div class="col-sm-8">
+              <input type="date" id="enlistmentDate" class="form-control" placeholder="입영일"> 
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="class" class="col-sm-4 col-form-label">군 분류</label>
+            <div class="col-sm-8">
+              <input type="text" id="class" class="form-control" placeholder="육군" disabled>
+            </div>
+          </div>
+  
+          <!-- 육군 -->
+          <div class="army">
+            <div class="form-group row my-2">
+              <label for="thecampId" class="col-sm-4 col-form-label">더 캠프 아이디</label>
+              <div class="col-sm-8">
+                <input type="text" id="thecampId" class="form-control" placeholder="더 캠프 아이디">
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+              <label for="thecampPw" class="col-sm-4 col-form-label">더 캠프 비밀번호</label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control" id="thecampPw">
+              </div>
+            </div>
+          </div>
         </div>
         <div class="d-grid gap-2">
           <button class="btn btn-lg btn-primary" id="Submit" type="button" style="background-color:#4154f1;" onclick="alert('군종을 선택해주세요!')">저장</button>

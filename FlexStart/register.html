@@ -66,27 +66,29 @@
         <h1>회원가입</h1>
       </div>
       <div class="col-3 form-group mx-auto">
-        <input type="text" id="id" class="form-control my-3" placeholder="아이디">
-        <input type="password" class="form-control my-3" id="pw" placeholder="비밀번호">
-        <input type="number" id="birth" class="form-control my-3" placeholder="생년월일(8자리)">
-        <input type="number" id="enlistment date" class="form-control my-3" placeholder="입영일(ex.210925)">
+        <input type="text" name="name" id="name" class="form-control my-3" placeholder="이름">
+        <input type="text" name="id" id="id" class="form-control my-3" placeholder="아이디" readonly>
+        <input type="password" name="pw" class="form-control my-3" id="pw" placeholder="비밀번호">
+        <input type="password" class="form-control my-3" placeholder="비밀번호 재입력">
+        <input type="number" name="birth" id="birth" class="form-control my-3" placeholder="생년월일(8자리)">
+        <input type="number" name="enterDate" id="enlistment date" class="form-control my-3" placeholder="입영일(ex.210925)">
         <p class="col-2">군종</p>
         <div class="row m-3">
 	        <div class="col-4">
 	            <div class="form-check form-check-inline">
-	                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="div_army()">
+	                <input class="form-check-input" type="radio" name="grpCdNm" id="army_radio" value="army" onclick="div_army()">
 	                <label class="form-check-label" for="inlineRadio1">육군</label>
 	            </div>
 	        </div>
 	        <div class="col-4">
 	            <div class="form-check form-check-inline">
-	                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled>
+	                <input class="form-check-input" type="radio" name="grpCdNm" value="navy" disabled>
 	                <label class="form-check-label" for="inlineRadio2">해군</label>
 	            </div>
 	        </div>
 	        <div class="col-4">
 	            <div class="form-check form-check-inline">
-	                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" onclick="div_airforce()">
+	                <input class="form-check-input" type="radio" name="grpCdNm" id="airforce_radio" value="airforce" onclick="div_airforce()">
 	                <label class="form-check-label" for="inlineRadio3">공군</label>
 	            </div>
 	        </div>
@@ -94,8 +96,8 @@
         <!-- 육군 -->
         <div id="army" style="display: none;">
         	<p class="col-4">더캠프아이디</p>
-        	<input type="text" class="form-control my-2" id="thecampID" placeholder="더 캠프 아이디">
-        	<input type="password" class="form-control my-2" id="thecampPW" placeholder="더 캠프 비밀번호">
+        	<input type="text" class="form-control my-2" name="thecampId" id="thecampId" placeholder="더 캠프 아이디">
+        	<input type="password" class="form-control my-2" name="thecampPw" id="thecampPw" placeholder="더 캠프 비밀번호">
         	
         	<p class="col-4">입영부대</p>
             <select class="form-control my-2" name="trainUnitCdNm" id="trainUnitCdNm">
@@ -104,8 +106,6 @@
             <br/>      
         </div>
         
-
-
         <!-- 공군 -->
         <div id="airforce" style="display: none;">
 
@@ -158,8 +158,15 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-	<script src="js/editprofile.js"></script>
-    <script src="js/register.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/editprofile.js"></script>
+  <script src="js/register.js"></script>
+   
+  <script>
+	    $(document).ready(function(){
+	    	setInfo('grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm');
+	    });
+   </script>
 </body>
 
 </html>

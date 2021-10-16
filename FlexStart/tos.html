@@ -81,7 +81,7 @@
   <section id="hero" class="hero d-flex align-items-center">
     <div class="col-12 text-center mx-auto">
       <h1 class="m-4">회원 약관</h1>
-      <div class="border mx-auto" style="overflow: scroll; width: 30%; height: 300px;">
+      <div class="col-8 col-md-6 col-xl-4 border mx-auto" style="overflow: scroll; height: 300px;">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus sagittis odio, nec efficitur mauris vestibulum eget. Proin est ante, scelerisque ac libero ut, sollicitudin fringilla sem. Sed iaculis vitae erat ut ultrices. Mauris sed eros mattis odio varius iaculis. Pellentesque maximus volutpat lacus ac sodales. Aliquam elit felis, porta a imperdiet eget, convallis sit amet ipsum. Etiam vulputate tempor maximus. Integer velit felis, convallis non lacus ut, consequat pretium enim. Integer quis est ac sem molestie rutrum nec quis est. Aenean vehicula lectus sit amet dictum malesuada. Vestibulum eget lacinia justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris at imperdiet ligula. Integer non velit pretium, auctor ex eget, posuere eros.
 
               Aenean consectetur luctus magna at dictum. Aliquam luctus ligula nunc, non rutrum lorem elementum in. Vestibulum posuere condimentum augue, ut dapibus nunc vulputate vitae. Mauris tortor metus, malesuada sed felis in, dapibus gravida risus. Proin lorem dolor, dictum vel nibh non, maximus finibus ipsum. Nullam suscipit viverra felis, in faucibus nisl bibendum eu. Aliquam non sapien dui. Cras laoreet nisl vitae massa pulvinar dignissim placerat in justo. Morbi nec lacinia nunc.
@@ -93,8 +93,15 @@
               Mauris at sapien magna. Vivamus sed dapibus tortor. Vivamus ullamcorper, massa ac suscipit accumsan, quam dolor finibus orci, sed dapibus nulla ex id mauris. Suspendisse eleifend luctus ultrices. Suspendisse ac ante dapibus, malesuada nulla id, tristique mauris. Praesent facilisis, magna eget pulvinar lacinia, dui massa rutrum eros, non laoreet erat urna eget elit. Aenean ornare sed magna non fermentum. Mauris tincidunt metus in rhoncus varius. In tortor est, fringilla eget mi pharetra, finibus fermentum sapien.
           </p>
       </div>
-      <input class="" type="radio" onclick="radioBtn()"> 약관에 동의합니다.
-      <button class="btn btn-dark m-2" id="registerBtn" onclick="location.href='register.html'" disabled>다음</button> 
+      <div class="my-3">
+        <input class="" id="radioBtn" type="radio" onclick="radioBtn()">
+        <label for="radioBtn">약관에 동의합니다.</label>
+      </div>
+
+      <div class="d-grid gap-2 col-4 col-xl-2 mx-auto">
+        <button class="btn btn-lg m-2" id="registerBtn" onclick="location.href='register.html'" style="background-color:#4154f1;" disabled>다음</button> 
+      </div>
+
     </div>
 
   </section><!-- End Hero -->

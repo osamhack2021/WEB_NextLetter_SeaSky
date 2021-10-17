@@ -330,8 +330,8 @@
 			   <artifactId>tomcat7-maven-plugin</artifactId>
 			   <version>2.2</version>
 			   <configuration>
-			   	   <url>http://tostit.i234.me:5004/manager/text</url> 
-			      <!--<url>http://20.194.39.15/manager/text</url>-->
+			   	   <!--<url>http://tostit.i234.me:5004/manager/text</url> -->
+			      <url>http://20.194.39.15/manager/text</url>
 			      <username>seasky</username>
 			      <password></password>
 			   </configuration>

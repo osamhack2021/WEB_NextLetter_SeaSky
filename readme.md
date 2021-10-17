@@ -23,7 +23,7 @@
 
 [기존 인터넷 편지의 문제]
 1. 주변에 친구한테 부탁해서 내 SNS 계정을 알려줘야하나요?
-2. SNS에 내 개인정보를 업로드하기엔 찝찝한데..
+2. SNS에 내 개인정보를 업로드하기엔 불쾌한데..
 3. 육군은 어플도 있는데, 해군/공군은 모바일에서  PC 버전으로 보는 건 불편해요.
 4. 인편 작성하다가 자꾸 사라져요.
 5. 훈련소 끝나고 나면 인터넷 편지를 다시 꺼내 볼 수 없어요.
@@ -211,6 +211,8 @@ public static void main(String[] args){
 ```
 
 </details>
+
+## 효과 및 전망 (Effects and Prospects)
  
 ## 팀 정보 (Team Information)
 - kim hyun ki (hkgo6040@naver.com), Github Id: Hyunki6040

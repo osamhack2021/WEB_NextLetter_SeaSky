@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-4">
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="grpCdNm" value="해군" disabled>
+                    <input class="form-check-input" type="radio" name="grpCdNm" value="해군" onclick="div_navy()">
                     <label class="form-check-label" for="inlineRadio2">해군</label>
                   </div>
                 </div>
@@ -161,9 +161,9 @@
           </div>
                     
         <div class="d-grid gap-2 mb-5">
-        <!-- 21.10.13 회원가입 버튼 위치 수정중 -->
           <button class="btn btn-lg btn-primary" type="button" id="Submit" style="background-color:#4154f1;" onclick="alert('군종을 선택해주세요!')">회원가입</button>
           <button class="btn btn-lg btn-primary" type="button" id="armySubmit" style="background-color:#4154f1;display: none;" onclick="saveInfo('grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm');location.href='login.do';" >회원가입</button>
+          <button class="btn btn-lg btn-primary" type="button" id="navySubmit" style="background-color:#4154f1;" onclick="alert('해군은 본인인증 문제로 논의 요청 및 준비중입니다.')">회원가입</button>
           <button class="btn btn-lg btn-primary" type="button" id="airforceSubmit" style="background-color:#4154f1;display: none;" onclick="saveInfo('grpCdNm,name,birth,enterDate');location.href='login.do';">회원가입</button>
         </div>
       </div>

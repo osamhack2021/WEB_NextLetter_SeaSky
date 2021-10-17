@@ -5,6 +5,7 @@ function div_army() {
     document.getElementById('Submit').style.display = 'none';
     document.getElementById('armySubmit').style.display = 'unset';
     document.getElementById('airforceSubmit').style.display = 'none';
+    document.getElementById('navySubmit').style.display = 'none';
 }
 
 function div_airforce() {
@@ -13,4 +14,14 @@ function div_airforce() {
     document.getElementById('Submit').style.display = 'none';
     document.getElementById('armySubmit').style.display = 'none';
     document.getElementById('airforceSubmit').style.display = 'unset';
+    document.getElementById('navySubmit').style.display = 'none';
+}
+
+function div_navy() {
+    document.getElementById('army').style.display = 'none';
+    
+    document.getElementById('Submit').style.display = 'none';
+    document.getElementById('armySubmit').style.display = 'none';
+    document.getElementById('airforceSubmit').style.display = 'none';
+    document.getElementById('navySubmit').style.display = 'unset';
 }

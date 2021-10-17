@@ -234,7 +234,7 @@
 	    	//정보설정
 	    	setInfo('id,pw,statusMsg,grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm');
 	    	
-	    	var name = sessionStorage.getItem('name');
+	    	var name = localStorage.getItem('name');
 	    	if(typeof name != 'undefined' && name != null && name != ''){
 	    		document.getElementById('text_name').innerText = name;
 	    	}

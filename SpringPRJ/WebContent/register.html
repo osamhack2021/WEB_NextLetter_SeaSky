@@ -1,161 +1,216 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    
-    <!-- Bootstrap CSS -->  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <title>Next Letter</title>
+  <meta content="" name="description">
 
-    <title>Next Letter</title> 
- 
-    <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-        body {
-            background-color: ivory;
-        }
-        .container {
-            background: ivory;
-        }
+  <meta content="" name="keywords">
 
-        @media (min-width: 768px) {
-            .container {
-                width: 553px;
-            }
-        }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        @media (min-width: 992px) {
-            .container {
-                width: 553px;
-            }
-        }
-    </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+	@media (max-width: 700px) {
+	  .col-3{
+        flex: 0 0 auto;
+  		width: 91.66666667%;
+	  }
+	}
+</style>
 </head>
 
 <body>
-    <div class="container h-100 align-items-center">
-        <div class="row h-100">
-            <div class="col-sm-12" style="margin-top: 25%">
-                <div class="logo text-center">
-                    <a href="index.html">
-                        <img src="img/Next Letter-logo.png" style="width: 50%">
-                    </a>
-                </div>
-                <div class="description border mx-5">
-                    <h2 class="text-center m-3">회원가입</h2>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-                    <div class="row m-2">
-                        <label for="id" class="col-4">아이디</label>
-                        <div class="col-8">
-                            <input type="text" id="id" style="width:90%;">
-                        </div>
-                    </div>
+      <a href="/" class="logo d-flex align-items-center">
+        <span>Next Letter</span>
+        <img src="assets/img/logo.png" alt="">
+      </a>
 
-                    <div class="row m-2">
-                        <label for="password" class="col-4">비밀번호</label>
-                        <div class="col-8">
-                            <input type="password" id="password" style="width:90%;">
-                        </div>
-                    </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="login.do">로그인</a></li>
+          <li><a class="nav-link scrollto active" href="register.do">회원가입</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-                    <div class="row m-2">
-                        <label for="birth" class="col-4">생년월일(8자리)</label>
-                        <div class="col-8">
-                            <input type="number" id="birth" style="width:90%;">
-                        </div>
-                    </div>
+    </div>
+  </header><!-- End Header -->
 
-                    <div class="row m-2">
-                        <label for="enlistment date" class="col-4">입영일(ex.210925)</label>
-                        <div class="col-8">
-                            <input type="number" id="enlistment date" style="width:90%;">
-                        </div>
-                    </div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="col-12">
+      <div class="text-center m-5">
+        <h1>회원 가입</h1>
+      </div>
+      <div class="col-9 col-md-6 col-lg-5 form-group mx-auto">
+        <div class="form-group row my-2">
+             <label for="thecampId" class="col-4 col-form-label">이름</label>
+             <div class="col-8">
+               <input type="text" name="name" id="name" class="form-control" placeholder="이름">
+             </div>
+           </div>
 
-                    <div class="row m-2">
-                        <p class="col-4">군종</p>
-                        <div class="col-8">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="div_army()">
-                                <label class="form-check-label" for="inlineRadio1">육군</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled>
-                                <label class="form-check-label" for="inlineRadio2">해군</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" onclick="div_airforce()">
-                                <label class="form-check-label" for="inlineRadio3">공군</label>
-                            </div>
-                        </div>                      
-                    </div>
-                    
-
-                    <!-- 육군 -->
-                    <div id="army" style="display: none;">
-                        <div class="row m-2">
-                            <label for="thecampID" class="col-4">더 캠프 아이디</label>
-                            <div class="col-8">
-                                <input type="text" id="thecampID" style="width:90%;">
-                            </div>
-                        </div>
-                        <div class="row m-2">
-                            <label for="thecampPW" class="col-4">더 캠프 비밀번호</label>
-                            <div class="col-8">
-                                <input type="password" id="thecampPW" style="width:90%;">
-                            </div>
-                        </div>
-                        <div class="row m-2">
-                            <label for="thecampID" class="col-4">더 캠프 아이디</label>
-                            <div class="col-8">
-                                <input type="text" id="thecampID" style="width:90%;">
-                            </div>
-                        </div>
-                        <div class="row m-2">
-                            <label for="성분" class="col-4">성분</label>
-                            <div class="col-8">
-                                <input type="text" id="성분" style="width:90%;">
-                            </div>
-                        </div>
-                        <div class="row m-2">
-                            <label for="trainUnitCdNm" class="col-4">입영부대</label>
-                            <div class="col-8">
-                                <select name="trainUnitCdNm" id="trainUnitCdNm" style="width: 90%;">
-                                    <option value="1사단">1사단</option><option value="2사단">2사단</option><option value="3사단">3사단</option><option value="5사단">5사단</option><option value="6사단">6사단</option><option value="7사단">7사단</option><option value="9사단">9사단</option><option value="11사단">11사단</option><option value="12사단">12사단</option><option value="15사단">15사단</option><option value="17사단">17사단</option><option value="20사단">20사단</option><option value="21사단">21사단</option><option value="22사단">22사단</option><option value="23사단">23사단</option><option value="25사단">25사단</option><option value="27사단">27사단</option><option value="28사단">28사단</option><option value="30사단">30사단</option><option value="31사단">31사단</option><option value="32사단">32사단</option><option value="35사단">35사단</option><option value="36사단">36사단</option><option value="37사단">37사단</option><option value="39사단">39사단</option><option value="50사단">50사단</option><option value="51사단">51사단</option><option value="53사단">53사단</option><option value="육군훈련소">육군훈련소</option><option value="육군훈련소(23연대)">육군훈련소(23연대)</option><option value="육군훈련소(25연대)">육군훈련소(25연대)</option><option value="육군훈련소(26연대)">육군훈련소(26연대)</option><option value="육군훈련소(27연대)">육군훈련소(27연대)</option><option value="육군훈련소(28연대)">육군훈련소(28연대)</option><option value="육군훈련소(29연대)">육군훈련소(29연대)</option><option value="육군훈련소(30연대)">육군훈련소(30연대)</option>
-                                </select>
-                            </div>
-                        </div>                      
-                    </div>
-                    
-
-
-                    <!-- 공군 -->
-                    <div id="airforce" style="display: none;">
-
-                    </div>
-
-
-                    <div class="row">
-                        <button class="btn btn-dark col-4 mx-auto my-3" id="armySubmit" onclick="saveInfo('grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm')">회원가입</button>
-                        <button class="btn btn-dark col-4 mx-auto my-3" id="airforceSubmit" onclick="saveInfo('grpCdNm,name,birth,enterDate')">회원가입</button>
-                    </div>
-                </div>
+          <div class="form-group row my-2">
+            <label for="id" class="col-4 col-form-label">아이디</label>
+            <div class="col-8">
+              <input type="text" name="id" class="form-control" id="id" value="helloSeasky123" placeholder="기본 아이디">
             </div>
-        </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw" class="col-4 col-form-label">비밀번호</label>
+            <div class="col-8">
+              <input type="password" name="pw" class="form-control" id="pw" placeholder="비밀번호">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="pw2" class="col-4 col-form-label">비밀번호 재확인</label>
+            <div class="col-8">
+              <input type="password" id="pw2" class="form-control" placeholder="비밀번호 재확인">
+            </div>
+          </div>
+
+          <div class="form-group row my-2" >
+            <label for="birth" class="col-4 col-form-label">생년월일</label>
+            <div class="col-8">
+              <input type="date" name="birth" id="birth" class="form-control" placeholder="생년월일">
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="enlistmentDate" class="col-4 col-form-label">입영일</label>
+            <div class="col-8">
+              <input type="date" name="enterDate" id="enlistmentDate" class="form-control" placeholder="입영일"> 
+            </div>
+          </div>
+
+          <div class="form-group row my-2">
+            <label for="class" class="col-4 col-form-label">군 분류</label>
+            <div class="col-8">
+              <div class="row my-2">
+                <div class="col-4">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="grpCdNm" id="army_radio" value="육군" onclick="div_army()">
+                    <label class="form-check-label" for="inlineRadio1">육군</label>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="grpCdNm" value="해군" disabled>
+                    <label class="form-check-label" for="inlineRadio2">해군</label>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="grpCdNm" id="airforce_radio" value="공군" onclick="div_airforce()">
+                    <label class="form-check-label" for="inlineRadio3">공군</label>
+                  </div>
+                </div>
+              </div>
+	          </div>
+          </div>
+  
+          <!-- 육군 -->
+          <div class="army" id="army" style="display: none;">
+            <div class="form-group row my-2">
+              <label for="thecampId" class="col-4 col-form-label">더 캠프 아이디</label>
+              <div class="col-8">
+                <input type="text" name="thecampId" id="thecampId" class="form-control" placeholder="더 캠프 아이디">
+              </div>
+            </div>
+
+            <div class="form-group row my-2">
+              <label for="thecampPw" class="col-4 col-form-label">더 캠프 비밀번호</label>
+              <div class="col-8">
+                <input type="password" name="thecampPw" class="form-control" id="thecampPw">
+              </div>
+            </div>
             
+            <div class="form-group row my-2">
+              <label for="thecampPw" class="col-4 col-form-label">입영부대</label>
+              <div class="col-8">
+              	<select class="form-control my-2" name="trainUnitCdNm" id="trainUnitCdNm">
+	                <option value="1사단">1사단</option><option value="2사단">2사단</option><option value="3사단">3사단</option><option value="5사단">5사단</option><option value="6사단">6사단</option><option value="7사단">7사단</option><option value="9사단">9사단</option><option value="11사단">11사단</option><option value="12사단">12사단</option><option value="15사단">15사단</option><option value="17사단">17사단</option><option value="20사단">20사단</option><option value="21사단">21사단</option><option value="22사단">22사단</option><option value="23사단">23사단</option><option value="25사단">25사단</option><option value="27사단">27사단</option><option value="28사단">28사단</option><option value="30사단">30사단</option><option value="31사단">31사단</option><option value="32사단">32사단</option><option value="35사단">35사단</option><option value="36사단">36사단</option><option value="37사단">37사단</option><option value="39사단">39사단</option><option value="50사단">50사단</option><option value="51사단">51사단</option><option value="53사단">53사단</option><option value="육군훈련소">육군훈련소</option><option value="육군훈련소(23연대)">육군훈련소(23연대)</option><option value="육군훈련소(25연대)">육군훈련소(25연대)</option><option value="육군훈련소(26연대)">육군훈련소(26연대)</option><option value="육군훈련소(27연대)">육군훈련소(27연대)</option><option value="육군훈련소(28연대)">육군훈련소(28연대)</option><option value="육군훈련소(29연대)">육군훈련소(29연대)</option><option value="육군훈련소(30연대)">육군훈련소(30연대)</option>
+	            </select>
+              </div>
+            </div>
+          </div>
+                    
+        <div class="d-grid gap-2 mb-5">
+        <!-- 21.10.13 회원가입 버튼 위치 수정중 -->
+          <button class="btn btn-lg btn-primary" type="button" id="Submit" style="background-color:#4154f1;" onclick="alert('군종을 선택해주세요!')">회원가입</button>
+          <button class="btn btn-lg btn-primary" type="button" id="armySubmit" style="background-color:#4154f1;display: none;" onclick="saveInfo('grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm');location.href='login.do';" >회원가입</button>
+          <button class="btn btn-lg btn-primary" type="button" id="airforceSubmit" style="background-color:#4154f1;display: none;" onclick="saveInfo('grpCdNm,name,birth,enterDate');location.href='login.do';">회원가입</button>
+        </div>
+      </div>
 
     </div>
 
-	<script src="js/editprofile.js"></script>
-    <script src="js/register.js"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </section><!-- End Hero -->
 
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>OSAM2021 SeaSky Team</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Developed by <a href="https://github.com/osamhack2021/WEB_NextLetter_SeaSky/">SeaSky</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/editprofile.js"></script>
+  <script src="js/register.js"></script>
+   
+  <script>
+	    $(document).ready(function(){
+	    	setInfo('id,pw,grpCdNm,name,birth,enterDate,thecampId,thecampPw,trainUnitCdNm');
+	    });
+   </script>
 </body>
+
 </html>

@@ -8,6 +8,7 @@ public class MessageDTO {
     private String sender;
     private String relation;
     private String pw;
+    private String reg_dt;
 
     public String getMessage_no() {
 		return message_no;
@@ -52,5 +53,11 @@ public class MessageDTO {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-
+	public String getReg_dt() {
+		return reg_dt;
+	}
+	public void setReg_dt(String reg_dt) {
+		this.reg_dt = reg_dt;
+	}
+	
 }

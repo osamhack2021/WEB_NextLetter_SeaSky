@@ -108,7 +108,7 @@ public class AirForceLibrary {
 			/*System.out.println(msg_response.getBody().toString());*/
 			//TODO 302 뜨는 현상 수정 필요
 			if(msg_response.getStatus() == 200 || msg_response.getStatus() == 302) {
-				msg = "sccuess";
+				msg = "success";
 			}
 		}
 		

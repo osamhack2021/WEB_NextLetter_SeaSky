@@ -27,7 +27,7 @@ function sendMessage(){
 }
 
 function chekNull(name){
-	 var value = sessionStorage.getItem(name);
+	 var value = localStorage.getItem(name);
 
 	if(value == null || value.length < 1){
 		alert('설정되지 않은 정보가 있습니다!');

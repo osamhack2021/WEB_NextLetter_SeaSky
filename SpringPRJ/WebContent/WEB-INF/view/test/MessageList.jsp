@@ -23,15 +23,13 @@
 	        </tr>
 	    </thead>
 	    <tbody>
-		    <c:forEach var="mDTO" items="${messageList}" varStatus="status">
-				<tr>
+		    <tr>
 		            <td>${mDTO.message_no}</td>
 		            <td>${mDTO.title}</td>
 		            <td>${mDTO.content}</td>
 		            <td>${mDTO.relation} ${mDTO.sender}</td>
 		            <td>${mDTO.user_no}</td>
 		        </tr>	
-			</c:forEach>
 	        
 	    </tbody>
 	</table>

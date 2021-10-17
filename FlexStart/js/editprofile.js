@@ -39,9 +39,9 @@ function setInfo(keyList){
 		var value = getSession(key);
 		if(typeof value != 'undefined' && value != null && value != ''){
 			if(key == 'grpCdNm'){
-				if(value == 'army'){
+				if(value == '육군'){
 					$("#army_radio").trigger("click");
-				}else if(value == 'airforce'){
+				}else if(value == '공군'){
 					$("#airforce_radio").trigger("click");
 				}
 			}else if(name == 'trainUnitCdNm'){
@@ -56,9 +56,9 @@ function setInfo(keyList){
 }
 
 function setSession(key, value){
-	sessionStorage.setItem(key + '', value + '');
+	localStorage.setItem(key + '', value + '');
 }
 
 function getSession(key){
-	return sessionStorage.getItem(key);
+	return localStorage.getItem(key);
 }

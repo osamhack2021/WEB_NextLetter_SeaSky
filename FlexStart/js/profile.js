@@ -9,15 +9,8 @@ function setInfo(keyList){
 		}
 	}
 	
-	//비밀번호 disable
-	var grpCdNm = getSession('grpCdNm');
-	if(typeof grpCdNm != 'undefined' && grpCdNm != null && grpCdNm != ''){
-		if(grpCdNm == 'army'){
-			document.getElementById('pw').disabled = true;
-		}
-	}
 }
 
 function getSession(key){
-	return sessionStorage.getItem(key);
+	return localStorage.getItem(key);
 }

@@ -4,13 +4,21 @@
 <mapper namespace="poly.persistance.mapper.MessageMapper">
 	<insert id="insertMessage" parameterType="MessageDTO">
 		INSERT INTO
-		message(USER_NO, TITLE, CONTENT, SENDER, RELATION, PW)
-		VALUES (#{user_no}, #{title}, #{content}, #{sender}, #{relation}, IFNULL(SHA2(#{pw},256), NULL))
+		message(USER_NO, TITLE, CONTENT, SENDER, RELATION, PW, REG_DT)
+		VALUES (#{user_no}, #{title}, #{content}, #{sender}, #{relation}, IFNULL(SHA2(#{pw},256), NULL), now())
 	</insert>
 	
 	<select id="getMessage"  parameterType="string" resultType="MessageDTO">
         SELECT *
         FROM  message
         WHERE(USER_NO=#{user_no})
+        ORDER BY MESSAGE_NO DESC
+    </select>
+    
+    <select id="getSendedMessage"  parameterType="MessageDTO" resultType="string">
+        SELECT CONTENT
+        FROM message
+        WHERE(PW=SHA2(#{pw},256) AND MESSAGE_NO=#{message_no})
+        ORDER BY MESSAGE_NO DESC
     </select>
 </mapper>

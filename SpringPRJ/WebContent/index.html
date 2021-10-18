@@ -603,7 +603,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+  	var login = sessionStorage.getItem('login');
+	
+	if(typeof login != 'undefined' && login != null && login != '' && login == '1'){
+		location.href = 'profile.do';
+	}
+	
+  </script>
 
 </body>
 
-</html>
+</html>;

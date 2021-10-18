@@ -188,7 +188,7 @@ public class TheCampLibrary {
         	  .field("sympathyLetterSubject", mDTO.getTitle())
         	  .field("boardDiv", "sympathyLetter")
         	  //Y이면 발송은 안하고 임시 저장만!
-        	  .field("tempSaveYn", "Y")
+        	  .field("tempSaveYn", "N")
         	  .asString();
         	
         	System.out.println("sendMsg : " + msg_response.getBody().toString());

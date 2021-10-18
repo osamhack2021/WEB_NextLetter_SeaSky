@@ -118,11 +118,13 @@ public class MessageController {
         String content = CmmUtil.nvl((String) request.getParameter("content"));
         String pw = CmmUtil.nvl((String) request.getParameter("pw"));
         String relation = CmmUtil.nvl((String) request.getParameter("relation"));
+        String sender = CmmUtil.nvl((String) request.getParameter("sender"));
         
         mDTO.setTitle(title);
         mDTO.setContent(content);
         mDTO.setPw(pw);
         mDTO.setRelation(relation);
+        mDTO.setSender(sender);
         
 		String msg = "";
 		
@@ -131,6 +133,8 @@ public class MessageController {
 			if(msg.equals("success")) {
 				model.addAttribute("msg", "발송에 성공했습니다.");
 				try {
+					//로그인 가정.
+					mDTO.setUser_no("1");
 					messageService.insertMessage(mDTO);
 				}catch (Exception e) {
 					e.printStackTrace();

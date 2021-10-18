@@ -38,7 +38,7 @@
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.do" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <span>Next Letter</span>
         <img src="assets/img/logo.png" alt="">
       </a>
@@ -47,7 +47,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="editprofile.do">정보수정</a></li>
-          <li><a class="nav-link scrollto" href="index.do" onclick="sessionStorage.removeItem('login');">로그아웃</a></li>
+          <li><a class="nav-link scrollto" href="/" onclick="sessionStorage.removeItem('login');">로그아웃</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

@@ -36,6 +36,11 @@
 
 
 ## 기능 설명
+
+[핵심기술 : 웹 스크래핑 기술]  
+	웹 스크래퍼가 우리 서비스의 핵심입니다.   
+	기존의 인터넷 편지 시스템에 Request를 보내고 그에따른 Response를 받습니다.   
+	
 [주요 기능]
 |  |육군 더캠프|해군 교육사|공군 기훈단|넥스트 레터|
 |--|--|--|--|--|
@@ -211,8 +216,6 @@ public static void main(String[] args){
 ```
 
 </details>
-
-## 효과 및 전망 (Effects and Prospects)
  
 ## 팀 정보 (Team Information)
 - kim hyun ki (hkgo6040@naver.com), Github Id: Hyunki6040

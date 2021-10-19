@@ -125,6 +125,9 @@ public class MessageController {
         mDTO.setPw(pw);
         mDTO.setRelation(relation);
         mDTO.setSender(sender);
+
+		//로그인 가정.
+		mDTO.setUser_no("1");
         
 		String msg = "";
 		
@@ -133,8 +136,6 @@ public class MessageController {
 			if(msg.equals("success")) {
 				model.addAttribute("msg", "발송에 성공했습니다.");
 				try {
-					//로그인 가정.
-					mDTO.setUser_no("1");
 					messageService.insertMessage(mDTO);
 				}catch (Exception e) {
 					e.printStackTrace();

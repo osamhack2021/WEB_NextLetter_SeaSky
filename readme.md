@@ -15,7 +15,7 @@
 > 훈련병의 개인정보도 지켜주는 인편지기, 넥스트 레터  
 > I'm on the, NEXT LETTER
 
-<p align="center"><img src="./workflow/Hnet-image.gif" width="60%"></p>  
+<p align="center">소개/시연 영상 보러가기 👇(클릭)<br/><a href="https://youtu.be/2kFsU7oG9hc"><img src="./workflow/Hnet-image.gif" width="60%"></a></p>  
 
 ## 프로젝트 소개
 [인터넷 편지 현황]

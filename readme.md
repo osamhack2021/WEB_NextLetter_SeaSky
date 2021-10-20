@@ -36,7 +36,7 @@
 	새로운 기능을 추가하고 기존 기능을 개선하고자 합니다.
 - 보다 안전하고 편한 인터넷 편지 발송 System을 통해 훈련병들에게 힘을 주고자 이번 프로젝트를 기획했습니다.
 
-<p align="center"><img src="./workflow/Webp.net-gifmaker (3).gif" width="20%"><img src="./workflow/Webp.net-gifmaker (2).gif" width="80%"></p>  
+<p align="center"><img src="./workflow/Webp.net-gifmaker (3).gif" width="19%">&nbsp&nbsp<img src="./workflow/Webp.net-gifmaker (2).gif" width="80%"></p>  
 
 ## 기능 설명
 

@@ -196,12 +196,14 @@
               <li>
                 <a class="nav-link active" data-bs-toggle="pill" href="#tab2">기능 비교</a>
               </li>
+              <!-- 일단 display: none -->
               <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab1">기존의 서비스의 문제점1</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab1" style="display: none;">기존의 서비스의 문제점1</a>
               </li>
               <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab3">기존의 서비스의 문제점2</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab3" style="display: none;">기존의 서비스의 문제점2</a>
               </li>
+              <!-- 여기까지 -->
               <li>
                 <a class="nav-link" data-bs-toggle="pill" href="#tab4">사용방법</a>
               </li>
@@ -229,7 +231,7 @@
               </div><!-- End Tab 1 Content -->
 
               <div class="tab-pane fade show active" id="tab2">
-                <table class="table table-hover"> 
+                <table class="table table-hover" style="word-break: keep-all;"> 
 					<thead>
 						<tr>
 							<th></th>
@@ -243,7 +245,7 @@
 						<tr>
 							<td>모바일 버전 제공</td>
 							<td><i class="ri-checkbox-blank-circle-line" style="font-weight: bolder;"></i></td>
-							<td><i class="ri-close-fill" style="font-weight: bolder;color:red;"></i></td>
+							<td><i class="ri-close-fill" style="font-weight: bolder; color:red;"></i></td>
 							<td><i class="ri-checkbox-blank-circle-line" style="font-weight: bolder;"></i></td>
 							<td><i class="ri-checkbox-blank-circle-line" style="font-weight: bolder;"></i></td>
 						</tr>
@@ -313,19 +315,19 @@
               
               <div class="tab-pane fade show" id="tab4">
                 <p>30초면 나만을 위한 인터넷 편지 작성 페이지가 완성됩니다.<br/>지금 시작하세요.</p>
-                <div class="d-flex align-items-center mb-2">
+                <div class="d-flex align-items-center my-4">
                   <i class="ri-number-1"></i>
                   <h4><a href="register.do">회원가입</a>하세요. 입대 정보가 나온뒤 개인 페이지에서 재수정 할 수 있습니다!</h4>
                 </div>
-                <div class="d-flex align-items-center mb-2">
+                <div class="d-flex align-items-center my-4">
                   <i class="ri-number-2"></i>
                   <h4><a href="login.do">로그인</a>하세요. 공유하기 버튼을 눌러 링크를 복사하세요.</h4>
                 </div>
-                <div class="d-flex align-items-center mb-2">
+                <div class="d-flex align-items-center my-4">
                   <i class="ri-number-3"></i>
                   <h4>개인 SNS에 업로드하고 친구들, 가족들에게 링크를 알려주세요.</h4>
                 </div>
-                <div class="d-flex align-items-center mb-2">
+                <div class="d-flex align-items-center my-4">
                   <i class="ri-number-4"></i>
                   <h4>인터넷 편지는 이제, 넥스트 레터에게 맡겨 주세요!<br/>가장 안전하고 신속하게 발송해드리겠습니다.</h4>
                 </div>
@@ -487,7 +489,7 @@
                   </button>
                 </h2>
                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
+                  <div class="accordion-body" style="padding-top: 20px; padding-bottom: 40px; line-height: 26px; font-size: 0.95rem;">
                     	입대정보가 나오기 전까지 기다리지 마세요.<br/>입대정보가 없어도 가입할 수 있습니다.<br/>입대정보가 나오면 나중에 개인정보 수정페이지에서 수정하세요.<br/>나만의 인터넷편지 페이지를 미리 꾸며보세요.
                   </div>
                 </div>

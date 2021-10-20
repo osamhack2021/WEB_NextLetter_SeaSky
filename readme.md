@@ -15,6 +15,8 @@
 > 훈련병의 개인정보도 지켜주는 인편지기, 넥스트 레터  
 > I'm on the, NEXT LETTER
 
+<p align="center"><img src="./workflow/Hnet-image.gif" width="60%"></p>  
+
 ## 프로젝트 소개
 [인터넷 편지 현황]
 - 육군 => 더캠프
@@ -34,6 +36,7 @@
 	새로운 기능을 추가하고 기존 기능을 개선하고자 합니다.
 - 보다 안전하고 편한 인터넷 편지 발송 System을 통해 훈련병들에게 힘을 주고자 이번 프로젝트를 기획했습니다.
 
+<p align="center"><img src="./workflow/Webp.net-gifmaker.gif (1)" width="20%"><img src="./workflow/Webp.net-gifmaker (2).gif" width="80%"></p>  
 
 ## 기능 설명
 
